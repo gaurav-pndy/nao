@@ -19,7 +19,7 @@ const socialIcons = [
   { src: "/header/Facebook.svg", alt: "Facebook", href: "#" },
   { src: "/header/X.svg", alt: "X", href: "#" },
   { src: "/header/Instagram.svg", alt: "Instagram", href: "#" },
-  { src: "/header/Linkedin.svg", alt: "LinkedIn", href: "#" },
+  { src: "/header/LinkedIn.svg", alt: "LinkedIn", href: "#" },
 ];
 
 export default function Header() {
