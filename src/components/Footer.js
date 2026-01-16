@@ -29,7 +29,7 @@ const socialIcons = [
   { src: "/footer/facebook.svg", alt: "Facebook", href: "#" },
   { src: "/footer/x.svg", alt: "X", href: "#" },
   { src: "/footer/instagram.svg", alt: "Instagram", href: "#" },
-  { src: "/footer/linkedin.svg", alt: "LinkedIn", href: "#" },
+  { src: "/footer/linkedIn.svg", alt: "LinkedIn", href: "#" },
 ];
 
 export default function Footer() {
