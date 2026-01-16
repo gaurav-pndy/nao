@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+
+body{
+  background: white;
+  color: #2d333a;
+}
+
+@theme {
+  --breakpoint-xs: 400px;
+  --color-blue: #1b3686;
+  --color-red: #d42c26;
+  --color-yellow: #ffdd03;
+  --color-orange: #ee7500;
+  
+
+}
+
+
+
+@media  (min-height: 850px) and (max-height: 1000px) {
+
+
+  .tab-height {
+    min-height: 70vh;
+  }
+}

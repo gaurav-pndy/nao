@@ -1,0 +1,17 @@
+<svg id="Group_16343" data-name="Group 16343" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_15" data-name="Rectangle 15" width="16.232" height="16.24" fill="#384f5d"/>
+    </clipPath>
+  </defs>
+  <circle id="Ellipse_2" data-name="Ellipse 2" cx="16" cy="16" r="16" fill="#fff"/>
+  <g id="Group_13" data-name="Group 13" transform="translate(7.884 7.101)">
+    <rect id="Rectangle_14" data-name="Rectangle 14" width="3.351" height="10.827" transform="translate(0.322 5.413)" fill="#384f5d"/>
+    <g id="Group_14" data-name="Group 14" transform="translate(0 0)">
+      <g id="Group_13-2" data-name="Group 13" clip-path="url(#clip-path)">
+        <path id="Path_67" data-name="Path 67" d="M1.982,4A2,2,0,1,0,0,2,1.99,1.99,0,0,0,1.982,4" transform="translate(0 0)" fill="#384f5d"/>
+        <path id="Path_68" data-name="Path 68" d="M12.1,13.241c0-1.522.7-2.429,2.042-2.429,1.232,0,1.825.87,1.825,2.429v5.683H19.3V12.068c0-2.9-1.644-4.3-3.939-4.3A3.774,3.774,0,0,0,12.1,9.556V8.1H8.887V18.923H12.1Z" transform="translate(-3.071 -2.684)" fill="#384f5d"/>
+      </g>
+    </g>
+  </g>
+</svg>
