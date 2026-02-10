@@ -49,7 +49,7 @@ export default function HowNAOSolves() {
         </motion.p>
 
         {/* Items */}
-        <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-8">
           {items.map((item, index) => (
             <motion.div
               key={item.title}

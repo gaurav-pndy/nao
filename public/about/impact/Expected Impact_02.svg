@@ -1,0 +1,16 @@
+<svg id="Group_16516" data-name="Group 16516" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="284.511" height="284.511" viewBox="0 0 284.511 284.511">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_2973" data-name="Rectangle 2973" width="284.511" height="284.511" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Group_16515" data-name="Group 16515" clip-path="url(#clip-path)">
+    <path id="Path_12150" data-name="Path 12150" d="M142.255,0A142.256,142.256,0,1,0,284.511,142.256,142.261,142.261,0,0,0,142.255,0m0,271.02A128.764,128.764,0,1,1,271.02,142.256,128.762,128.762,0,0,1,142.255,271.02" transform="translate(0 0)"/>
+    <path id="Path_12151" data-name="Path 12151" d="M302.529,243.453a59.656,59.656,0,1,0,59.656,59.656,59.655,59.655,0,0,0-59.656-59.656" transform="translate(-160.506 -160.889)" fill="#f8c600" fill-rule="evenodd"/>
+    <path id="Path_12152" data-name="Path 12152" d="M410.672,278.9c-28.662,24.995-49.734,61.118-58.506,102.859A59.662,59.662,0,0,0,410.672,278.9" transform="translate(-232.733 -184.315)" fill="#ffe495" fill-rule="evenodd"/>
+    <path id="Path_12153" data-name="Path 12153" d="M446.3,345.984H413.49V324.1a6.3,6.3,0,0,0-12.591,0v28.181a6.292,6.292,0,0,0,6.295,6.3h39.1a6.3,6.3,0,0,0,0-12.592" transform="translate(-264.939 -210.025)" fill-rule="evenodd"/>
+    <path id="Path_12154" data-name="Path 12154" d="M198.171,211.351a13.176,13.176,0,0,1,13.178-13.177h11.164V185.586H211.349a25.765,25.765,0,0,0-25.767,25.768v11.162h12.589Z" transform="translate(-122.644 -122.647)" fill-rule="evenodd"/>
+    <path id="Path_12155" data-name="Path 12155" d="M555.608,185.587H544.446v12.587h11.162a13.178,13.178,0,0,1,13.178,13.181v11.162h12.59V211.352a25.764,25.764,0,0,0-25.768-25.765" transform="translate(-359.803 -122.647)" fill-rule="evenodd"/>
+    <path id="Path_12156" data-name="Path 12156" d="M353.453,283.874a69.581,69.581,0,1,0-104.46,60.211l-16.98,19.1h18.371l12.875-12.873a69.251,69.251,0,0,0,41.223,0l12.875,12.872H335.73l-16.977-19.1a69.554,69.554,0,0,0,34.7-60.211m-69.581,56.99a56.991,56.991,0,1,1,56.992-56.99,56.99,56.99,0,0,1-56.992,56.99" transform="translate(-141.616 -141.618)" fill-rule="evenodd"/>
+  </g>
+</svg>

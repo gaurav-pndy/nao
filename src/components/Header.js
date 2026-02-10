@@ -5,14 +5,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { usePathname, useRouter } from "next/navigation";
 
 const navItems = [
-  { label: "Home", href: "#" },
-  { label: "About", href: "#" },
-  { label: "Participate", href: "#" },
-  { label: "Resources", href: "#" },
-  { label: "Partners", href: "#" },
-  { label: "Contact", href: "#" },
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Participate", href: "/participate" },
+  { label: "Resources", href: "/resources" },
+  { label: "Partners", href: "/partners" },
+  { label: "Contact", href: "/contact" },
 ];
 
 const socialIcons = [
@@ -25,6 +26,12 @@ const socialIcons = [
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+
+  const router = useRouter();
+
+  const pathname = usePathname();
+
+  const isHome = pathname === "/";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -90,11 +97,16 @@ export default function Header() {
             className="h-10 lg:h-16 w-40 relative"
           >
             <Image
-              src="/header/logo.svg"
+              onClick={() => router.push("/")}
+              src={
+                isHome || isScrolled
+                  ? "/header/logo.svg"
+                  : "/header/logo-white.png"
+              }
               alt="National Aviation Olympiad"
               fill
               priority
-              className="object-contain object-left"
+              className="object-contain object-left cursor-pointer"
             />
           </motion.div>
 
@@ -109,7 +121,11 @@ export default function Header() {
               >
                 <Link
                   href={item.href}
-                  className="text-[#2d333a] hover:text-[#d42c26] transition-colors duration-300"
+                  className={`transition-colors duration-300 ${
+                    isScrolled || isHome
+                      ? "text-[#2d333a] hover:text-red"
+                      : "text-white hover:text-yellow"
+                  }`}
                 >
                   {item.label}
                 </Link>
@@ -120,7 +136,9 @@ export default function Header() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setMenuOpen(true)}
-            className="md:hidden flex text-[#2d333a] text-3xl flex-col gap-1"
+            className={`md:hidden flex text-3xl flex-col gap-1 transition-colors ${
+              isScrolled || isHome ? "text-[#2d333a]" : "text-white"
+            }`}
           >
             <GiHamburgerMenu />
           </button>
@@ -168,7 +186,7 @@ export default function Header() {
                     <Link
                       href={item.href}
                       onClick={() => setMenuOpen(false)}
-                      className="text-lg text-[#2d333a] hover:text-[#d42c26]"
+                      className="text-lg text-[#2d333a] hover:text-red"
                     >
                       {item.label}
                     </Link>

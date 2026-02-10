@@ -8,7 +8,6 @@ import NewsSection from "@/components/Home/NewsSection";
 import StudentJourney from "@/components/Home/StudentJourney";
 import WhoCanParticipate from "@/components/Home/WhoCanParticipate";
 import WhyAviation from "@/components/Home/WhyAviation";
-import Image from "next/image";
 
 export default function Home() {
   return (

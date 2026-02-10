@@ -8,12 +8,12 @@ import { FaPhoneAlt } from "react-icons/fa";
 import { SlGlobe } from "react-icons/sl";
 
 const quickLinks = [
-  { label: "Home", href: "#" },
-  { label: "About", href: "#" },
-  { label: "Participate", href: "#" },
-  { label: "Resources", href: "#" },
-  { label: "Partners", href: "#" },
-  { label: "Contact", href: "#" },
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Participate", href: "/participate" },
+  { label: "Resources", href: "/resources" },
+  { label: "Partners", href: "/partners" },
+  { label: "Contact", href: "/contact" },
 ];
 
 const resources = [
