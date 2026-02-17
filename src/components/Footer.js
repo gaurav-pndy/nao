@@ -226,19 +226,19 @@ export default function Footer() {
 
           <div className="flex flex-row justify-between items-center  gap-4 md:gap-6 lg:gap-10">
             <Link
-              href="#"
+              href="/privacy-policy"
               className="hover:text-orange transition-all duration-300"
             >
-              Privacy policy
+              Privacy Policy
             </Link>
             <Link
-              href="#"
+              href="terms-and-conditions"
               className="hover:text-orange transition-all duration-300"
             >
               Terms and Conditions
             </Link>
             <Link
-              href="#"
+              href="refund-policy"
               className="hover:text-orange transition-all duration-300"
             >
               Refund Policy

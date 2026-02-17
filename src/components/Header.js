@@ -45,7 +45,11 @@ export default function Header() {
 
   const pathname = usePathname();
 
-  const isHome = pathname === "/";
+  const isHome =
+    pathname === "/" ||
+    pathname === "/privacy-policy" ||
+    pathname === "/terms-and-conditions" ||
+    pathname === "/refund-policy";
 
   useEffect(() => {
     const handleScroll = () => {
