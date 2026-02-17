@@ -6,6 +6,8 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { usePathname, useRouter } from "next/navigation";
+import { FaWhatsapp } from "react-icons/fa";
+import { MdOutlineEmail } from "react-icons/md";
 
 const navItems = [
   { label: "Home", href: "/" },
@@ -17,10 +19,22 @@ const navItems = [
 ];
 
 const socialIcons = [
-  { src: "/header/Facebook.svg", alt: "Facebook", href: "#" },
-  { src: "/header/X.svg", alt: "X", href: "#" },
-  { src: "/header/Instagram.svg", alt: "Instagram", href: "#" },
-  { src: "/header/LinkedIn.svg", alt: "LinkedIn", href: "#" },
+  {
+    src: "/header/Facebook.svg",
+    alt: "Facebook",
+    href: "https://www.facebook.com/nao.aviationolympiad",
+  },
+  { src: "/header/X.svg", alt: "X", href: "https://x.com/aviaolympiad" },
+  {
+    src: "/header/Instagram.svg",
+    alt: "Instagram",
+    href: "https://www.instagram.com/nao.aviationolympiad",
+  },
+  {
+    src: "/header/LinkedIn.svg",
+    alt: "LinkedIn",
+    href: "https://www.linkedin.com/showcase/aviationolympiad",
+  },
 ];
 
 export default function Header() {
@@ -74,6 +88,20 @@ export default function Header() {
                   <Image src={icon.src} alt={icon.alt} fill />
                 </motion.a>
               ))}
+              <motion.a
+                href="https://wa.me/+919211229927"
+                target="_blank"
+                className="w-6 h-6 bg-[#ffffff] rounded-full hover:scale-110 transition-all duration-300 flex justify-center items-center p-1 relative"
+              >
+                <FaWhatsapp className="text-[#384f5d]" />
+              </motion.a>
+              <motion.a
+                href="mailto:nao@thecso.in"
+                target="_blank"
+                className="w-6 h-6 bg-[#ffffff] rounded-full hover:scale-110 transition-all duration-300 flex justify-center items-center p-1 relative"
+              >
+                <MdOutlineEmail className="text-[#384f5d]" />
+              </motion.a>
             </div>
           </div>
         </div>
@@ -94,20 +122,31 @@ export default function Header() {
             initial={{ x: -20, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.5 }}
-            className="h-10 lg:h-16 w-40 relative"
+            className="flex items-end gap-1 cursor-pointer"
+            onClick={() => router.push("/")}
           >
-            <Image
-              onClick={() => router.push("/")}
-              src={
-                isHome || isScrolled
-                  ? "/header/logo.svg"
-                  : "/header/logo-white.png"
-              }
-              alt="National Aviation Olympiad"
-              fill
-              priority
-              className="object-contain object-left cursor-pointer"
-            />
+            <div className="relative  h-10 lg:h-16 w-24 lg:w-40">
+              <Image
+                src={
+                  isHome || isScrolled
+                    ? "/header/logo.svg"
+                    : "/header/logo-white.png"
+                }
+                alt="National Aviation Olympiad"
+                fill
+                priority
+                className="object-contain object-left"
+              />
+            </div>
+
+            {/* 2026 badge */}
+            <span
+              className={`text-xs lg:text-xs leading-3 md:leading-2.5 font-semibold transition-colors ${
+                isScrolled || isHome ? "" : "text-white"
+              } ${isHome ? "leading-3 md:leading-2.5" : "leading-3.5"} `}
+            >
+              2026
+            </span>
           </motion.div>
 
           {/* Desktop Navigation */}
@@ -122,9 +161,11 @@ export default function Header() {
                 <Link
                   href={item.href}
                   className={`transition-colors duration-300 ${
-                    isScrolled || isHome
-                      ? "text-[#2d333a] hover:text-red"
-                      : "text-white hover:text-yellow"
+                    pathname === item.href
+                      ? "font-semibold text-red"
+                      : isScrolled || isHome
+                        ? "text-[#2d333a] hover:text-red"
+                        : "text-white hover:text-yellow"
                   }`}
                 >
                   {item.label}
@@ -186,7 +227,11 @@ export default function Header() {
                     <Link
                       href={item.href}
                       onClick={() => setMenuOpen(false)}
-                      className="text-lg text-[#2d333a] hover:text-red"
+                      className={`text-lg transition-colors ${
+                        pathname === item.href
+                          ? "font-semibold text-red"
+                          : "text-[#2d333a] hover:text-red"
+                      }`}
                     >
                       {item.label}
                     </Link>
@@ -206,6 +251,20 @@ export default function Header() {
                       <Image src={icon.src} alt={icon.alt} fill />
                     </a>
                   ))}
+                  <a
+                    href="https://wa.me/+919211229927"
+                    target="_blank"
+                    className="w-8 h-8 bg-[#ffffff] rounded-full  flex justify-center items-center  relative"
+                  >
+                    <FaWhatsapp className="text-[#384f5d] text-xl" />
+                  </a>
+                  <a
+                    href="mailto:nao@thecso.in"
+                    target="_blank"
+                    className="w-8 h-8 bg-[#ffffff] rounded-full  flex justify-center items-center  relative"
+                  >
+                    <MdOutlineEmail className="text-[#384f5d] text-xl" />
+                  </a>
                 </div>
               </div>
             </motion.aside>

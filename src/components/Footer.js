@@ -4,8 +4,9 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 import { BsEnvelopeFill } from "react-icons/bs";
-import { FaPhoneAlt } from "react-icons/fa";
+import { FaPhoneAlt, FaWhatsapp } from "react-icons/fa";
 import { SlGlobe } from "react-icons/sl";
+import { MdOutlineEmail } from "react-icons/md";
 
 const quickLinks = [
   { label: "Home", href: "/" },
@@ -64,7 +65,7 @@ export default function Footer() {
               />
             </div>
 
-            <p className=" text-slate-700 text-sm leading-5 mb-4">
+            <p className=" text-slate-700 text-justify text-sm leading-5 mb-4">
               National Aviation Olympiad is India’s premier aviation education
               awareness movement conceived and organized by the Centre for
               Scientific Outreach (CSO) to inspire the next generation of
@@ -90,7 +91,7 @@ export default function Footer() {
           >
             <h4 className="font-bold text-xl  mb-6">Quick Links</h4>
 
-            <ul className="space-y-2 lg:space-y-6">
+            <ul className="space-y-2 lg:space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.label}>
                   <Link
@@ -113,7 +114,7 @@ export default function Footer() {
           >
             <h4 className="font-bold text-xl mb-6">Resources</h4>
 
-            <ul className="space-y-2 lg:space-y-6">
+            <ul className="space-y-2 lg:space-y-3">
               {resources.map((item) => (
                 <li key={item.label}>
                   <Link
@@ -137,7 +138,7 @@ export default function Footer() {
           >
             <h4 className="font-bold text-xl mb-6">Contact Us</h4>
 
-            <ul className="space-y-2 lg:space-y-6 text-sm text-slate-700">
+            <ul className="space-y-2 lg:space-y-3 text-sm text-slate-700">
               <li className="flex gap-3 items-start">
                 <BsEnvelopeFill className="text-lg  mt-1" />
                 <div className="leading-5 flex flex-col">
@@ -177,24 +178,38 @@ export default function Footer() {
               <li className="flex gap-3 items-start">
                 <SlGlobe className=" text-xl md:text-3xl  mt-0.5 h-fit" />
                 <p className="leading-5">
-                  CSOE Research Foundation <br />
+                  NAO Secretariat <br />
                   B-1, Third Floor, Greater Kailash Enclave – II, <br />
-                  New Delhi – 110048, India.
+                  New Delhi – 110 048, India.
                 </p>
               </li>
             </ul>
 
             {/* Socials */}
-            <div className="flex gap-4 mt-2 lg:mt-6">
+            <div className="flex gap-2 mt-2 lg:mt-6">
               {socialIcons.map((icon, i) => (
                 <a
                   key={i}
                   href={icon.href}
-                  className="w-10 h-10 rounded-full  flex items-center justify-center hover:scale-110 transition-all duration-300"
+                  className="w-8 h-8 rounded-full  flex items-center justify-center hover:scale-110 transition-all duration-300"
                 >
                   <img src={icon.src} alt={icon.alt} className="" />
                 </a>
               ))}
+              <motion.a
+                href="https://wa.me/+919211229927"
+                target="_blank"
+                className="w-8 h-8 bg-black rounded-full hover:scale-110 transition-all duration-300 flex justify-center items-center p-1 relative"
+              >
+                <FaWhatsapp className="text-white text-lg" />
+              </motion.a>
+              <motion.a
+                href="mailto:nao@thecso.in"
+                target="_blank"
+                className="w-8 h-8 bg-black rounded-full hover:scale-110 transition-all duration-300 flex justify-center items-center p-1 relative"
+              >
+                <MdOutlineEmail className="text-white text-lg" />
+              </motion.a>
             </div>
           </motion.div>
         </div>
@@ -204,7 +219,7 @@ export default function Footer() {
       <div className=" bg-[#f5f5fa]  py-4 ">
         <div className="max-w-5xl  mx-auto px-4 flex flex-col lg:flex-row justify-between items-center font-semibold text-slate-600 gap-4 text-sm md:text-base lg:gap-10 text-center md:text-left">
           <p>
-            © 2025{" "}
+            © 2026{" "}
             <span className="text-orange ">National Aviation Olympiad</span>.
             All rights reserved.
           </p>

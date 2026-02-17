@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { nasalization } from "@/fonts/nasalization";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -43,13 +44,19 @@ export default function Hero() {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3 }}
             >
-              <button className="bg-yellow w-full md:w-fit hover:bg-[#e6c400] text-black font-medium px-6 py-2.5 rounded-lg transition-colors">
-                Register as a Student
-              </button>
+              <Link
+                href={"/participate"}
+                className="bg-yellow w-full md:w-fit hover:bg-[#e6c400] text-black font-medium px-6 py-2.5 rounded-lg transition-colors"
+              >
+                Register Your School
+              </Link>
 
-              <button className="bg-red w-full md:w-fit hover:bg-[#b92520] text-white font-medium px-6 py-2.5 rounded-lg transition-colors">
-                Register as a School
-              </button>
+              <Link
+                href={"/about"}
+                className="bg-red w-full md:w-fit hover:bg-[#b92520] text-white font-medium px-6 py-2.5 rounded-lg transition-colors"
+              >
+                Learn More
+              </Link>
             </motion.div>
           </motion.div>
 
@@ -95,7 +102,7 @@ export default function Hero() {
           {[
             {
               id: 1,
-              value: "28/8",
+              value: "36",
               label: "States & UTs Participating",
               icon: "/hero/01.svg",
             },
@@ -107,14 +114,14 @@ export default function Hero() {
             },
             {
               id: 3,
-              value: "3",
-              label: "Competition Phases",
+              value: "10,000+",
+              label: "Schools participating",
               icon: "/hero/03.svg",
             },
             {
               id: 4,
               value: "145",
-              label: "National Qualifiers",
+              label: "National Finalists",
               icon: "/hero/04.svg",
             },
           ].map((item, i) => (

@@ -35,7 +35,7 @@ export default function StudentJourney() {
           transition={{ duration: 0.5 }}
           className="text-3xl md:text-4xl text-center font-bold text-orange"
         >
-          Your students&apos; journey with NAO
+          Your journey with NAO
         </motion.h2>
 
         {/* Subtitle */}
@@ -46,8 +46,9 @@ export default function StudentJourney() {
           transition={{ duration: 0.5, delay: 0.1 }}
           className="mt-4 font-medium md:text-lg "
         >
-          A clear, three-phase path from classroom curiosity to national-level
-          recognition.
+          Students (Indian Citizens) from Classes 8 to 12 can participate in a
+          structured three phase Olympiad. <br />
+          Group 1: Classes 8, 9 & 10; Group 2: Classes 11 & 12
         </motion.p>
 
         {/* Journey */}

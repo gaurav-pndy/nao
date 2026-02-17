@@ -4,15 +4,21 @@ import Marquee from "react-fast-marquee";
 import { motion } from "framer-motion";
 
 const awards = [
-  { icon: "/awards/01.svg", label: "Scholarships" },
+  { icon: "/awards/01.svg", label: "Participation Recognition" },
+  { icon: "/awards/01.svg", label: "Academic Recognition" },
+  { icon: "/awards/01.svg", label: "Performance Recognition" },
+  { icon: "/awards/02.svg", label: "Internship Opportunity" },
+  { icon: "/awards/04.svg", label: "National Felicitation" },
+  { icon: "/awards/06.svg", label: "Drone Pilot licence" },
   { icon: "/awards/02.svg", label: "Career Mentorship" },
-  { icon: "/awards/03.svg", label: "Industry Exposure" },
-  { icon: "/awards/04.svg", label: "National Recognition" },
+  { icon: "/awards/02.svg", label: "Networking Opportunities" },
+
+  { icon: "/awards/01.svg", label: "Scholarships" },
+  { icon: "/awards/03.svg", label: "Exposure Trips" },
+  { icon: "/awards/05.svg", label: "Aviation Learning Kits" },
+  { icon: "/awards/05.svg", label: "Media Visibility" },
   { icon: "/awards/05.svg", label: "Skill Development" },
-  { icon: "/awards/06.svg", label: "Free Drone Pilot licence" },
-  { icon: "/awards/06.svg", label: "Place Holder" },
-  { icon: "/awards/06.svg", label: "Place Holder" },
-  { icon: "/awards/06.svg", label: "Place Holder" },
+  { icon: "/awards/05.svg", label: "Community Engagement" },
 ];
 
 export default function AwardsBenefits() {
@@ -38,7 +44,8 @@ export default function AwardsBenefits() {
           transition={{ delay: 0.1, duration: 0.5 }}
           className="mt-4 font-medium md:text-lg "
         >
-          What students and schools gain
+          Students and Stakeholders can benefit through a bouquet of
+          offerings{" "}
         </motion.p>
       </div>
 

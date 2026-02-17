@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function GuidedBy() {
   return (
@@ -40,9 +41,13 @@ export default function GuidedBy() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1, duration: 0.5 }}
-            className="mt-4 font-medium md:text-lg "
+            className="mt-4 font-medium md:text-lg max-w-3xl mx-auto"
           >
-            What students and schools gain
+            A 100+ member Expert Committee ensuring world-class academic and
+            professional credibility. Leading Academicians from IITs, NITs, CBSE
+            experts, Professional Experts from DRDO, ISRO, HAL, Airbus, Boeing,
+            Seasoned bureaucrats from DGCA, AAI, NITI Aayog, NSDC, IAF etc.,
+            constitute NAO’s expert committee.{" "}
           </motion.p>
 
           {/* Main Stat */}
@@ -61,7 +66,7 @@ export default function GuidedBy() {
           </motion.div>
 
           {/* Breakdown */}
-          <div className="mt-16 max-w-2xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
+          <div className="mt-16 mb-8 max-w-2xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
             {[
               {
                 src: "/guided/02.svg",
@@ -98,6 +103,13 @@ export default function GuidedBy() {
               </motion.div>
             ))}
           </div>
+
+          <Link
+            href={"/about"}
+            className=" bg-yellow w-full md:w-fit hover:bg-[#e6c400] text-black font-medium px-6 py-2.5 rounded-lg transition-colors cursor-pointer"
+          >
+            Learn More
+          </Link>
         </div>
       </div>
     </section>

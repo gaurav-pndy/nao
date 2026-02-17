@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const items = [
   {
-    title: "National\nReach",
+    title: "Pan-India\nAwareness",
     image: "/how/01.png",
   },
   {
@@ -12,11 +12,11 @@ const items = [
     image: "/how/02.png",
   },
   {
-    title: "Career\nPathways",
+    title: "Career\nGuidance",
     image: "/how/03.png",
   },
   {
-    title: "National\nRecognition",
+    title: "Scholarship\nAssistance",
     image: "/how/04.png",
   },
 ];
@@ -44,8 +44,8 @@ export default function HowNAOSolves() {
           transition={{ duration: 0.5, delay: 0.1 }}
           className="mt-4 font-medium md:text-lg "
         >
-          NAO is more than an Olympiad exam <br /> – it is an ecosystem that
-          connects students, schools, industry, and policymakers.
+          NAO is more than just an Olympiad <br /> It is an ecosystem that
+          connects students, workforce, industry, and policymakers.
         </motion.p>
 
         {/* Items */}

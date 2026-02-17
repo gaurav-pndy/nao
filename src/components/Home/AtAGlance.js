@@ -6,11 +6,15 @@ import { motion } from "framer-motion";
 const stats = [
   {
     icon: "/glance/1.svg",
-    text: "10,000+ Collaborating Schools",
+    text: "36 States & UTs participating",
   },
   {
     icon: "/glance/1.svg",
-    text: "28 States + 8 UTs Targeted",
+    text: "10,000+ Schools participating",
+  },
+  {
+    icon: "/glance/1.svg",
+    text: "1,00,000+ Students participating",
   },
   {
     icon: "/glance/1.svg",
@@ -26,11 +30,11 @@ const stats = [
   },
   {
     icon: "/glance/1.svg",
-    text: "1.1 Million Aviation Professionals Needed",
+    text: "1.1 Million Aviation Professionals Pipeline",
   },
   {
     icon: "/glance/1.svg",
-    text: "1.1 Million Aviation Professionals Needed",
+    text: "TOP 5 Winners' education sponsored*",
   },
 ];
 
@@ -44,14 +48,27 @@ export default function NAOAtAGlance() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-center text-3xl md:text-4xl font-bold mb-8"
+          className="text-center text-3xl md:text-4xl font-bold "
         >
           NAO at a glance
         </motion.h2>
+        <motion.p
+          initial={{ opacity: 0, y: 12 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+          className="mt-4 font-medium md:text-lg max-w-3xl mx-auto text-center "
+        >
+          The National Aviation Olympiad (NAO), organized by the Centre of
+          Scientific Outreach (CSO), aims to build awareness about aviation
+          while preparing students for a future-ready workforce. The Olympiad
+          will also open doors for young people to explore new technologies and
+          career opportunities in the aviation sector.
+        </motion.p>
       </div>
 
       {/* Continuous Marquee */}
-      <div className=" relative">
+      <div className=" relative mt-8">
         <div className="absolute h-full left-0 w-0 lg:w-60 xl:w-80 bg-linear-to-r from-white to-transparent z-10"></div>
         <div className="absolute h-full right-0 w-0 lg:w-60 xl:w-80 bg-linear-to-l from-white to-transparent z-10"></div>
         <Marquee
