@@ -23,7 +23,7 @@ export default function AboutHero() {
             className="md:w-1/2 "
           >
             <h1 className="text-4xl md:text-5xl xl:text-6xl font-bold text-yellow leading-tight ">
-              About the National Aviation Olympiad
+              Igniting young minds <br /> elevating India's skies
             </h1>
 
             <p className="mt-2 md:mt-4 text-white text-lg md:text-xl xl:text-2xl font-semibold ">
@@ -37,11 +37,11 @@ export default function AboutHero() {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3 }}
             >
-              <button className="bg-yellow w-full md:w-fit hover:bg-[#e6c400] text-black font-medium px-6 py-2.5 rounded-lg transition-colors">
+              <button className="bg-yellow cursor-pointer w-full md:w-fit hover:bg-[#e6c400] text-black font-medium px-6 py-2.5 rounded-lg transition-colors">
                 Register as a Student
               </button>
 
-              <button className="bg-red w-full md:w-fit hover:bg-[#b92520] text-white font-medium px-6 py-2.5 rounded-lg transition-colors">
+              <button className="bg-red cursor-pointer w-full md:w-fit hover:bg-[#b92520] text-white font-medium px-6 py-2.5 rounded-lg transition-colors">
                 Register as a School
               </button>
             </motion.div>
@@ -51,7 +51,7 @@ export default function AboutHero() {
         {/* STATS BAR */}
       </div>
 
-      <motion.div
+      {/* <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.4, duration: 0.6 }}
@@ -103,7 +103,7 @@ export default function AboutHero() {
             </div>
           ))}
         </div>
-      </motion.div>
+      </motion.div> */}
 
       {/* Bottom Gradient Strip */}
       <div

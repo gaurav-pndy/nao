@@ -4,37 +4,52 @@ import { motion } from "framer-motion";
 
 export default function AboutCSO() {
   return (
-    <section className=" py-12 overflow-hidden ">
+    <section className="relative py-12 overflow-hidden">
+      {/* Background Image */}
       <div
-        className="relative p-4 md:p-10 py-12 overflow-hidden min-h-140"
+        className="absolute inset-0 bg-contain bg-no-repeat bg-bottom md:bg-cover md:bg-center"
         style={{
-          backgroundColor: "#964090",
+          backgroundImage: "url('/about/cso.png')",
         }}
-      >
-        <div className="relative max-w-3xl mx-auto px-4 text-center text-white">
-          {/* Heading */}
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="text-3xl md:text-4xl text-center font-bold "
-          >
-            About CSO{" "}
-          </motion.h2>
+      />
 
-          {/* Subtitle */}
-          <motion.p
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1, duration: 0.5 }}
-            className="mt-4 font-medium md:text-lg "
-          >
-            Civil Society Organization specializes in large-scale education
-            programs combining rigor with real-world relevance.{" "}
-          </motion.p>
-        </div>
+      {/* Overlay */}
+      {/* <div className="absolute inset-0 bg-[#964090]/85" /> */}
+
+      {/* Content */}
+      <div className="relative z-10 max-w-6xl mx-auto px-4">
+        <h2 className="text-3xl md:text-4xl text-center font-bold text-orange">
+          About Organizer
+        </h2>
+        <motion.div
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="max-w-sm lg:max-w-lg xl:max-w-xl mt-8 md:mt-16 pb-20 md:pb-0"
+        >
+          {/* Logo + Name */}
+          <div className="flex flex-col lg:flex-row lg:items-center  mb-6">
+            <img
+              src="/about/cso-logo.svg"
+              alt="CSO Logo"
+              className="h-14 w-fit"
+            />
+            <h2 className="text-2xl md:text-3xl font-bold">
+              Centre for Scientific Outreach
+            </h2>
+          </div>
+
+          {/* Description */}
+          <p className="text-lg font-medium ">
+            The Centre for Scientific Outreach (CSO) is a Not-for-Profit
+            organisation dedicated to promoting scientific awareness and
+            education across India. Through NAO, CSO aims to create a
+            sustainable platform for aviation education and career development
+            across India, contributing to India’s position as s global aviation
+            leader.
+          </p>
+        </motion.div>
       </div>
     </section>
   );

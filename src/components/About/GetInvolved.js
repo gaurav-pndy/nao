@@ -29,12 +29,12 @@ export default function GetInvolved() {
                 Get Involved
               </h3>
 
-              <p className="text-lg md:text-xl  leading-tight font-light mb-6">
-                Schools register students. <br />
-                Sponsors support initiatives. <br />
-                Experts contribute questions and mentorship. <br />
-                Volunteers support outreach.
-              </p>
+              <ul className="text-lg md:text-xl  leading-tight font-light mb-6 list-disc pl-6">
+                <li> Schools register students. </li>
+               <li> Sponsors support initiatives. </li>
+               <li> Experts contribute questions and mentorship.</li>
+               <li>  Volunteers support outreach.</li>
+              </ul>
 
               <Link
                 href="/participate"

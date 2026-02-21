@@ -5,17 +5,20 @@ import { motion } from "framer-motion";
 const impacts = [
   {
     title: "Immediate",
-    description: "Introduce aviation careers to thousands of students.",
+    description:
+      "Expand structured awareness of aviation and aerospace careers to students across India, introducing scientific pathways at an early stage",
     icon: "/about/impact/Expected Impact_01.svg",
   },
   {
     title: "Medium-term",
-    description: "Build alumni pursuing aviation education.",
+    description:
+      "Develop a growing alumni base of students pursuing aviation, aerospace, and allied STEM education through informed academic pathways",
     icon: "/about/impact/Expected Impact_02.svg",
   },
   {
     title: "Long-term",
-    description: "Contribute to 1.1M workforce requirement.",
+    description:
+      "Strengthen India’s Aviation Talent Pipeline by contributing meaningfully to the projected 1.1 million workforce requirement over the coming decade",
     icon: "/about/impact/Expected Impact_03.svg",
   },
 ];
@@ -34,6 +37,15 @@ export default function ExpectedImpact() {
         >
           Expected Impact
         </motion.h2>
+        <motion.p
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.1, duration: 0.5 }}
+          className="mt-4 font-medium md:text-lg "
+        >
+          A Phased, Long-Term Contribution to India’s Aviation Growth Story{" "}
+        </motion.p>
 
         {/* Cards */}
         <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
