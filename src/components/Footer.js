@@ -27,10 +27,22 @@ const resources = [
 ];
 
 const socialIcons = [
-  { src: "/footer/facebook.svg", alt: "Facebook", href: "#" },
-  { src: "/footer/x.svg", alt: "X", href: "#" },
-  { src: "/footer/instagram.svg", alt: "Instagram", href: "#" },
-  { src: "/footer/linkedIn.svg", alt: "LinkedIn", href: "#" },
+  {
+    src: "/header/Facebook.svg",
+    alt: "Facebook",
+    href: "https://www.facebook.com/nao.aviationolympiad",
+  },
+  { src: "/header/X.svg", alt: "X", href: "https://x.com/aviaolympiad" },
+  {
+    src: "/header/Instagram.svg",
+    alt: "Instagram",
+    href: "https://www.instagram.com/nao.aviationolympiad",
+  },
+  {
+    src: "/header/LinkedIn.svg",
+    alt: "LinkedIn",
+    href: "https://www.linkedin.com/showcase/aviationolympiad",
+  },
 ];
 
 export default function Footer() {
@@ -142,12 +154,6 @@ export default function Footer() {
               <li className="flex gap-3 items-start">
                 <BsEnvelopeFill className="text-lg  mt-1" />
                 <div className="leading-5 flex flex-col">
-                  <a
-                    href="mailto:hello@cso.in"
-                    className="hover:text-orange transition-all duration-300"
-                  >
-                    hello@thecso.in
-                  </a>
                   <a
                     href="mailto:nao@thecso.in"
                     className="hover:text-orange transition-all duration-300"

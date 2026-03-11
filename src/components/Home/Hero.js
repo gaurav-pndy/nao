@@ -25,11 +25,11 @@ export default function Hero() {
             className="lg:w-1/2 "
           >
             <h1 className="text-4xl md:text-5xl xl:text-6xl font-bold text-red leading-tight ">
-              Igniting young minds, elevating India’s skies
+              National Aviation Olympiad 2026
             </h1>
 
             <p className="mt-2 md:mt-4 text-lg md:text-xl xl:text-2xl font-semibold ">
-              India’s 1st Pan-India Olympiad dedicated exclusively to aviation
+              Igniting young minds, elevating India’s skies
             </p>
 
             <div className="mt-2 md:mt-3 md:text-lg xl:text-xl">

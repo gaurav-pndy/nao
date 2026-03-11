@@ -36,9 +36,6 @@ export default function SupportSection() {
               <a href="mailto:nao@thecso.in" className="text-lg">
                 nao@thecso.in
               </a>
-              <a href="mailto:support.nao@thecso.in" className="text-lg ">
-                support.nao@thecso.in
-              </a>
             </div>
 
             {/* Phone */}
@@ -50,9 +47,6 @@ export default function SupportSection() {
               <a href="tel:+919211229927" className="text-lg">
                 +91 92112 29927
               </a>
-              <a href="tel:+919773987836" className="text-lg ">
-                +91 97739 87836
-              </a>
             </div>
 
             {/* Hours */}
@@ -62,7 +56,7 @@ export default function SupportSection() {
                 <FiMapPin className=" text-4xl" />
               </div>
               <p className="text-lg leading-tight">
-                Hours: <br /> Mon–Sat, 10 AM–6 PM IST
+                Hours: Mon–Sat, 10 AM – 6 PM IST
               </p>
             </div>
           </div>
