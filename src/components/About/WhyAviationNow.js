@@ -33,11 +33,11 @@ export default function WhyAviationWhyNow() {
           </div>
 
           {/* Tagline & Body text */}
-          <div className="mb-6">
-            <p className="text-lg font-semibold mb-2">
+          <div className="mb-4">
+            <p className="text-lg font-semibold mb-2 text-left">
               India’s Aviation Workforce Crisis
             </p>
-            <p className="leading-tight lg:max-w-2xl font-medium">
+            <p className="leading-tight lg:max-w-2xl font-medium mx-auto text-center">
               India’s aviation sector stands at a critical juncture. As the world’s third-largest aviation market with exponential growth projections, the nation faces an unprecedented workforce shortage that threatens to undermine its aviation ambitions.
             </p>
           </div>

@@ -28,73 +28,73 @@ export default function BecomeSponsor() {
           whileHover={{ scale: 1.02 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="bg-gradient-to-r from-[#e0f2f7] to-[#d0ebf4] rounded-2xl p-8 md:p-12 shadow-lg hover:shadow-xl"
+          className="bg-yellow/30 rounded-3xl p-6 md:p-8 shadow-xl hover:shadow-2xl"
         >
-          <h3 className="text-2xl md:text-4xl font-bold text-center mb-2 flex items-center justify-center gap-2 text-blue-700">
+          <h3 className="text-2xl md:text-3xl font-bold text-center mb-2 flex items-center justify-center gap-2 text-orange-800">
             <FiUsers /> Become a Partner
           </h3>
-          <p className="text-center md:text-lg mb-8 text-blue-700">
+          <p className="text-center text-lg mb-6 text-orange-800">
             Interested in partnering? Let’s explore how we can work together.
           </p>
 
-          <form onSubmit={handleSubmit} className="space-y-6 max-w-3xl mx-auto">
+          <form onSubmit={handleSubmit} className="space-y-4 max-w-3xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
-                <label className="block text-blue-700 mb-1">Full Name*</label>
+                <label className="block text-orange-800 mb-1 text-sm">Full Name*</label>
                 <input
                   type="text"
                   name="fullName"
                   required
-                  placeholder="e.g. Jane Doe"
-                  className="w-full rounded-lg px-4 py-2.5 text-gray-800 bg-white border border-gray-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400"
+                  placeholder="Jane Doe"
+                  className="w-full rounded-lg px-3 py-2 text-sm text-gray-800 bg-white border border-orange-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
                 />
               </div>
               <div>
-                <label className="block text-blue-700 mb-1">Organization Name*</label>
+                <label className="block text-orange-800 mb-1 text-sm">Organization Name*</label>
                 <input
                   type="text"
                   name="organization"
                   required
-                  placeholder="e.g. School ABC"
-                  className="w-full rounded-lg px-4 py-2.5 text-gray-800 bg-white border border-gray-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400"
+                  placeholder="School ABC"
+                  className="w-full rounded-lg px-3 py-2 text-sm text-gray-800 bg-white border border-orange-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
                 />
               </div>
               <div>
-                <label className="block text-blue-700 mb-1">Designation / Role*</label>
+                <label className="block text-orange-800 mb-1 text-sm">Designation / Role*</label>
                 <input
                   type="text"
                   name="designation"
                   required
-                  placeholder="e.g. Club President"
-                  className="w-full rounded-lg px-4 py-2.5 text-gray-800 bg-white border border-gray-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400"
+                  placeholder="Club President"
+                  className="w-full rounded-lg px-3 py-2 text-sm text-gray-800 bg-white border border-orange-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
                 />
               </div>
               <div>
-                <label className="block text-blue-700 mb-1">Email*</label>
+                <label className="block text-orange-800 mb-1 text-sm">Email*</label>
                 <input
                   type="email"
                   name="email"
                   required
-                  placeholder="e.g. name@example.com"
-                  className="w-full rounded-lg px-4 py-2.5 text-gray-800 bg-white border border-gray-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400"
+                  placeholder="name@example.com"
+                  className="w-full rounded-lg px-3 py-2 text-sm text-gray-800 bg-white border border-orange-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
                 />
               </div>
               <div>
-                <label className="block text-blue-700 mb-1">Phone*</label>
+                <label className="block text-orange-800 mb-1 text-sm">Phone*</label>
                 <input
                   type="tel"
                   name="phone"
                   required
-                  placeholder="e.g. +91 12345 67890"
-                  className="w-full rounded-lg px-4 py-2.5 text-gray-800 bg-white border border-gray-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400"
+                  placeholder="+91 12345 67890"
+                  className="w-full rounded-lg px-3 py-2 text-sm text-gray-800 bg-white border border-orange-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
                 />
               </div>
               <div>
-                <label className="block text-blue-700 mb-1">Partnership Type*</label>
+                <label className="block text-orange-800 mb-1">Partnership Type*</label>
                 <select
                   name="partnershipType"
                   required
-                  className="w-full rounded-lg px-4 py-2.5 text-gray-800 bg-white border border-gray-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400"
+                  className="w-full rounded-lg px-3 py-2 text-sm text-gray-800 bg-white border border-orange-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
                 >
                   <option value="">Select type</option>
                   <option>Title/Lead Sponsor</option>
@@ -108,28 +108,28 @@ export default function BecomeSponsor() {
                 </select>
               </div>
               <div className="md:col-span-2">
-                <label className="block text-blue-700 mb-1">Brief Message (optional)</label>
+                <label className="block text-orange-800 mb-1">Brief Message (optional)</label>
                 <textarea
                   name="message"
-                  rows={4}
-                  placeholder="Write a short message..."
-                  className="w-full rounded-lg px-4 py-2.5 text-gray-800 bg-white border border-gray-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400"
+                  rows={3}
+                  placeholder="Short message"
+                  className="w-full rounded-lg px-3 py-2 text-sm text-gray-800 bg-white border border-orange-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
                 />
               </div>
             </div>
-            <div className="text-center mt-4">
+            <div className="text-center mt-2">
               <button
                 type="submit"
-                className="bg-blue-500 px-6 py-3 rounded-lg font-semibold text-white hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300 transition-all w-full sm:w-auto"
+                className="bg-orange px-4 py-2 rounded-lg font-semibold text-white text-sm hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-300 transition-all w-full sm:w-auto"
               >
                 Submit Enquiry
               </button>
             </div>
           </form>
 
-          <p className="text-center text-blue-700/80 mt-6 text-sm">
-            Alternatively, email us at{' '}
-            <a href="mailto:partner@thecso.in" className="underline">
+          <p className="text-center mt-4 text-sm text-orange-800">
+            Or email{' '}
+            <a href="mailto:partner@thecso.in" className="underline font-semibold text-orange-900">
               partner@thecso.in
             </a>
           </p>

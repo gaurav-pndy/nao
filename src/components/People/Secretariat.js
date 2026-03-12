@@ -93,12 +93,14 @@ export default function Secretariat() {
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
+          whileHover={{ scale: 1.02 }}
+          transition={{ duration: 0.4 }}
           viewport={{ once: true }}
-          className="w-full bg-white rounded-xl p-8 mb-8 shadow-lg ring-1 ring-orange-100 flex flex-col md:flex-row divide-y md:divide-y-0 md:divide-x divide-gray-200"
+          className="w-full bg-yellow/10 rounded-2xl p-6 md:p-8 mb-8 shadow-lg hover:shadow-xl ring-1 ring-yellow-200 flex flex-col md:flex-row divide-y md:divide-y-0 md:divide-x divide-gray-200 items-center"
         >
-          <div className="flex-1 flex items-center gap-3 px-4 py-3">
-            <div className="w-10 h-10 rounded-full bg-orange-200 flex items-center justify-center text-orange-600">
-              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+          <div className="flex-1 flex flex-col items-center justify-center gap-2 px-4 py-3 text-center">
+            <div className="w-12 h-12 rounded-full bg-orange-300 flex items-center justify-center text-orange-700">
+              <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
                 <path d="M10 2a6 6 0 00-6 6c0 4.418 6 10 6 10s6-5.582 6-10a6 6 0 00-6-6zm0 8a2 2 0 110-4 2 2 0 010 4z"/>
               </svg>
             </div>
@@ -110,9 +112,9 @@ export default function Secretariat() {
               </p>
             </div>
           </div>
-          <div className="flex-1 flex items-center gap-3 px-4 py-3">
-            <div className="w-10 h-10 rounded-full bg-orange-200 flex items-center justify-center text-orange-600">
-              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+          <div className="flex-1 flex flex-col items-center justify-center gap-2 px-4 py-3 text-center">
+            <div className="w-12 h-12 rounded-full bg-orange-300 flex items-center justify-center text-orange-700">
+              <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M10 2a8 8 0 100 16 8 8 0 000-16zm1 9V5h-2v6h6v-2h-4z" clipRule="evenodd"/>
               </svg>
             </div>

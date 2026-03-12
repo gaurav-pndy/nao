@@ -15,8 +15,13 @@ export default function DownloadBrochure() {
       phone: form.phone.value,
       tier: form.tier.value,
     };
-    const pdfUrl = "/partners/NAO_Sponsorship_Brochure.pdf";
-    window.open(pdfUrl, "_blank");
+    const pdfUrl = "/partners/NAO_2026_Brochure.pdf";
+    const link = document.createElement("a");
+    link.href = pdfUrl;
+    link.download = "NAO_2026_Brochure.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (

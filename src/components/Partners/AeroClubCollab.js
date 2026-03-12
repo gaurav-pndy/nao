@@ -36,15 +36,21 @@ export default function AeroClubCollab() {
           Empowering college Aero Clubs to drive grassroots aviation outreach across India
         </motion.p>
 
-        {/* Overview card */}
+        {/* Overview card (highlighted) */}
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           whileHover={{ scale: 1.02 }}
-          className="bg-white rounded-2xl p-6 md:p-10 shadow-md mb-12 border-l-4 border-orange"
+          className="bg-yellow/20 rounded-2xl p-6 md:p-10 shadow-lg mb-12 border-l-8 border-orange ring-2 ring-orange/20 flex flex-col justify-center"
         >
-          <p className="text-gray-700 leading-relaxed">
+          <div className="flex items-center mb-4 justify-center">
+            <FaPlane className="text-3xl text-orange mr-3" />
+            <h3 className="text-xl md:text-2xl font-semibold text-orange">
+              Aero Club Collaboration Overview
+            </h3>
+          </div>
+          <p className="text-gray-800 leading-relaxed text-center">
             NAO collaborates with college-level Aero Clubs, Technical
             Associations and Aviation Societies to extend aviation awareness to
             school students through hands-on workshops, drone demonstrations,
@@ -165,7 +171,7 @@ export default function AeroClubCollab() {
           viewport={{ once: true }}
         >
           <motion.a
-            href="/partners/NAO_Sponsorship_Brochure.pdf"
+            href="/partners/NAO_2026_Brochure.pdf"
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ scale: 1.03 }}
@@ -178,7 +184,7 @@ export default function AeroClubCollab() {
             whileHover={{ scale: 1.03 }}
             className="bg-blue px-6 py-3 rounded-lg font-semibold text-white hover:bg-blue-700 transition-colors flex items-center gap-2"
           >
-            <FiMail /> Partner as Aero Club / Aviation Society
+            <FiMail /> Partner as Aero Club 
           </motion.a>
         </motion.div>
       </div>

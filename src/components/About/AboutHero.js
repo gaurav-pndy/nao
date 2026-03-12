@@ -23,11 +23,11 @@ export default function AboutHero() {
             className="md:w-1/2 "
           >
             <h1 className="text-4xl md:text-5xl xl:text-6xl font-bold text-yellow leading-tight ">
-              Igniting young minds <br /> elevating India's skies
+              Igniting young minds, elevating India’s skies
             </h1>
 
             <p className="mt-2 md:mt-4 text-white text-lg md:text-xl xl:text-2xl font-semibold ">
-              Transforming aviation education in India
+              India’s 1st Pan-India Olympiad dedicated exclusively to aviation
             </p>
 
             {/* CTA BUTTONS */}

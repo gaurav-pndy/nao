@@ -78,7 +78,7 @@ export default function PartnershipCategories() {
         {/* CTA to download brochure */}
         <div className="mt-8 text-center">
           <a
-            href="/partners/NAO_Sponsorship_Brochure.pdf"
+            href="/partners/NAO_2026_Brochure.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-yellow px-6 py-3 rounded-lg font-semibold hover:bg-[#e6c400] transition-colors"

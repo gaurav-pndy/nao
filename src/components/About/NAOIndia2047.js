@@ -37,10 +37,13 @@ export default function NAOIndia2047() {
           <motion.div
             whileHover={{ scale: 1.03 }}
             transition={{ type: "spring", stiffness: 120 }}
-            className="bg-white rounded-2xl shadow-sm p-6"
+            className="relative bg-white rounded-2xl shadow-lg p-6 overflow-hidden border-l-8 border-orange-500"
           >
-            <p className="font-semibold text-lg mb-3">By 2030, NAO aims to:</p>
-            <ul className="list-disc list-inside space-y-2 text-gray-700">
+            <p className="font-semibold text-lg mb-3 flex items-center gap-2">
+              <span className="inline-block w-3 h-3 bg-orange-500 rounded-full" />
+              By 2030, NAO aims to:
+            </p>
+            <ul className="list-disc list-inside space-y-2 text-gray-900">
               <li>Reach 1 crore+ students</li>
               <li>Establish 10 NAO regional hubs</li>
               <li>Provide 10,000+ scholarships</li>
@@ -52,10 +55,13 @@ export default function NAOIndia2047() {
           <motion.div
             whileHover={{ scale: 1.03 }}
             transition={{ type: "spring", stiffness: 120 }}
-            className="bg-white rounded-2xl shadow-sm p-6"
+            className="relative bg-white rounded-2xl shadow-lg p-6 overflow-hidden border-l-8 border-blue-500"
           >
-            <p className="font-semibold text-lg mb-3">By 2047, NAO aims to contribute to:</p>
-            <ul className="list-disc list-inside space-y-2 text-gray-700">
+            <p className="font-semibold text-lg mb-3 flex items-center gap-2">
+              <span className="inline-block w-3 h-3 bg-blue-500 rounded-full" />
+              By 2047, NAO aims to contribute to:
+            </p>
+            <ul className="list-disc list-inside space-y-2 text-gray-900">
               <li>Making India the world’s 3rd-largest aviation market</li>
               <li>Aviation and drone superpower status</li>
               <li>A globally recognised aerospace workforce</li>

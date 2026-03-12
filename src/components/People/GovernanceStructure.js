@@ -35,7 +35,7 @@ export default function GovernanceStructure() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="relative bg-blue-50 border border-blue-300 rounded-lg p-6 w-56 text-center shadow-sm after:content-[''] after:absolute after:top-full after:left-1/2 after:w-px after:h-16 after:bg-gray-300 after:transform after:-translate-x-1/2 after:-translate-y-1 after:-rotate-45"
+              className="relative bg-blue-50 border border-blue-300 rounded-lg p-6 w-56 text-center shadow-sm after:content-[''] after:absolute after:top-full after:left-1/2 after:w-px after:h-16 after:bg-gray-300 after:transform after:origin-top after:-translate-x-1/2 after:-rotate-45"
             >
               <p className="font-semibold">Advisory Committee</p>
             </motion.div>
@@ -44,7 +44,7 @@ export default function GovernanceStructure() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="relative bg-blue-50 border border-blue-300 rounded-lg p-6 w-56 text-center shadow-sm after:content-[''] after:absolute after:top-full after:left-1/2 after:w-px after:h-16 after:bg-gray-300 after:transform after:-translate-x-1/2 after:-translate-y-1 after:rotate-45"
+              className="relative bg-blue-50 border border-blue-300 rounded-lg p-6 w-56 text-center shadow-sm after:content-[''] after:absolute after:top-full after:left-1/2 after:w-px after:h-16 after:bg-gray-300 after:transform after:origin-top after:-translate-x-1/2 after:rotate-45"
             >
               <p className="font-semibold">Expert Committee</p>
             </motion.div>

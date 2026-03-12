@@ -32,7 +32,6 @@ export default function AboutPage() {
       <NAOCommittee />
       <AviationCareerPathways />
       <NAOIndia2047 />
-
       <AboutCSO />
       <GetInvolved />
     </>

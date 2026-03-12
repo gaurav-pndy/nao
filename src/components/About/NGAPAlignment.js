@@ -22,7 +22,7 @@ export default function NGAPAlignment() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.2, duration: 0.5 }}
-          className="leading-relaxed mb-4 text-center italic"
+          className="leading-relaxed mb-4 text-center font-semibold italic"
         >
           NGAP is the global framework. NAO is India’s on-ground implementation mechanism.
         </motion.p>

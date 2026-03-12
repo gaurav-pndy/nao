@@ -22,7 +22,7 @@ export default function AviationCareerPathways() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.2, duration: 0.5 }}
-          className="leading-relaxed mb-6"
+          className="leading-relaxed text-center mb-6"
         >
           NAO introduces students to the full spectrum of aviation careers — from
           cockpit to ground operations, from aerospace engineering to drone

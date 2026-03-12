@@ -59,7 +59,7 @@ export default function AboutCSO() {
             <a
               href="https://www.thecso.in"
               target="_blank"
-              className="text-blue underline font-medium"
+              className="inline-block bg-yellow text-black font-medium px-6 py-2 rounded-lg hover:bg-[#e6c400] transition-colors"
             >
               Visit CSO Website
             </a>

@@ -132,7 +132,7 @@ export default function NAOCommittee() {
           </Link>
 
           <Link
-            href="/people"
+            href="/people#eligibility"
             className="bg-red  cursor-pointer w-full md:w-fit hover:bg-[#b92520] text-white font-medium px-6 py-2.5 rounded-lg transition-colors"
           >
             Nominate Expert

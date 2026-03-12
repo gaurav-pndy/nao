@@ -9,7 +9,7 @@ export default function ContactPage() {
   return (
     <>
       <ContactHero />
-      <ZonalCoordinators />
+      {/* <ZonalCoordinators /> */}
       <QuickContact />
       <ContactForm />
       <FAQSection />

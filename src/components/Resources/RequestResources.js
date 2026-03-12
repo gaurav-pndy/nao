@@ -69,9 +69,10 @@ export default function RequestResources() {
                 <select
                   id="rr-role"
                   required
+                  defaultValue=""
                   className="w-full rounded-lg px-3 py-2 text-white bg-white/20 focus:outline-none focus:ring-2 focus:ring-yellow-400 text-sm"
                 >
-                  <option value="" disabled selected>
+                  <option value="" disabled>
                     Select role
                   </option>
                   <option>School</option>
@@ -91,9 +92,10 @@ export default function RequestResources() {
                 <select
                   id="rr-type"
                   required
+                  defaultValue=""
                   className="w-full rounded-lg px-3 py-2 text-white bg-white/20 focus:outline-none focus:ring-2 focus:ring-yellow-400 text-sm"
                 >
-                  <option value="" disabled selected>
+                  <option value="" disabled>
                     Select resource type
                   </option>
                   <option>Study Material</option>

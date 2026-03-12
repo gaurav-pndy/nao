@@ -36,6 +36,9 @@ export default function SupportSection() {
               <a href="mailto:nao@thecso.in" className="text-lg">
                 nao@thecso.in
               </a>
+              <a href="mailto:support.nao@thecso.in" className="text-lg mt-2">
+                support.nao@thecso.in
+              </a>
             </div>
 
             {/* Phone */}
@@ -46,6 +49,9 @@ export default function SupportSection() {
               </div>
               <a href="tel:+919211229927" className="text-lg">
                 +91 92112 29927
+              </a>
+              <a href="tel:+919773987836" className="text-lg mt-2">
+                +91 97739 87836
               </a>
             </div>
 

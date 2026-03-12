@@ -32,9 +32,9 @@ export default function SyllabusOverview() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4 }}
-            className="space-y-6 bg-gradient-to-br from-blue-50 to-white rounded-lg p-6 shadow-md border-l-4 border-blue-400"
+            className="space-y-6 bg-yellow/10 rounded-lg p-6 shadow-md border-l-4 border-yellow"
           >
-            <h3 className="text-xl font-semibold text-blue-700">Classes 8, 9 &amp; 10</h3>
+            <h3 className="text-xl font-semibold text-yellow-700">Classes 8, 9 &amp; 10</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
                 <p className="font-semibold mb-2 text-orange-500">Section A – Core Aviation</p>
@@ -67,9 +67,9 @@ export default function SyllabusOverview() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4 }}
-            className="space-y-6 bg-gradient-to-br from-purple-50 to-white rounded-lg p-6 shadow-md border-l-4 border-purple-400"
+            className="space-y-6 bg-orange/10 rounded-lg p-6 shadow-md border-l-4 border-orange"
           >
-            <h3 className="text-xl font-semibold text-purple-700">Classes 11 &amp; 12</h3>
+            <h3 className="text-xl font-semibold text-orange-700">Classes 11 &amp; 12</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
                 <p className="font-semibold mb-2 text-orange-500">Section A – Core Aviation</p>
