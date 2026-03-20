@@ -99,7 +99,7 @@ export default function SolutionPillars() {
           transition={{ duration: 0.5 }}
           className="text-3xl md:text-4xl text-center font-bold text-orange mb-12"
         >
-          Strategic Pillars
+          NAO Strategic Framework
         </motion.h2>
 
         {/* Grid */}

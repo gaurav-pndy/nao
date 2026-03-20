@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function RequestResources() {
   return (
-    <section className="py-12">
+    <section className="py-8">
       <div className="max-w-6xl mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -22,31 +22,111 @@ export default function RequestResources() {
           />
 
           {/* Right Content */}
-          <div className="bg-[#0061e5]  p-4 md:p-6 flex flex-col justify-center">
-            <h3 className="text-xl md:text-3xl text-white font-semibold mb-2">
+          <div className="bg-[#0061e5]  p-3 md:p-4 flex flex-col justify-center">
+            <h3 className="text-lg md:text-2xl text-white font-semibold mb-1">
               Request Resources
             </h3>
 
-            <p className=" md:text-lg text-white mb-6 ">
+            <p className=" md:text-base text-white mb-4 ">
               Request new resources as per your custom need. Our team will get
               back to you as soon as possible.
             </p>
 
-            <div className="flex flex-col lg:flex-row lg:items-end gap-3 ">
-              <div className="w-full">
-                {" "}
-                <p className="text-white/60 mb-2">Your Email</p>
+            <form className="flex flex-col gap-3" onSubmit={(e) => e.preventDefault()}>
+              {/* Full name */}
+              <div>
+                <label className="text-white/70 mb-0.5 block text-sm" htmlFor="rr-name">
+                  Full Name <span className="text-red-400">*</span>
+                </label>
                 <input
-                  type="email"
-                  placeholder="Enter Your Email"
-                  className="flex-1 rounded-lg w-full px-4 py-2.5  text-white focus:outline-none focus:ring-2 focus:ring-yellow-400 bg-white/20"
+                  id="rr-name"
+                  type="text"
+                  required
+                  placeholder="Enter your full name"
+                  className="w-full rounded-lg px-3 py-2 text-white bg-white/20 focus:outline-none focus:ring-2 focus:ring-yellow-400 text-sm"
                 />
               </div>
 
-              <button className="bg-yellow h-fit min-w-44  font-medium px-4 py-2.5 rounded-lg hover:bg-[#e6c400] transition-all duration-300 cursor-pointer">
-                Request Now
+              {/* Email */}
+              <div>
+                <label className="text-white/70 mb-0.5 block text-sm" htmlFor="rr-email">
+                  Email <span className="text-red-400">*</span>
+                </label>
+                <input
+                  id="rr-email"
+                  type="email"
+                  required
+                  placeholder="Enter your email"
+                  className="w-full rounded-lg px-3 py-2 text-white bg-white/20 focus:outline-none focus:ring-2 focus:ring-yellow-400 text-sm"
+                />
+              </div>
+
+              {/* Role */}
+              <div>
+                <label className="text-white/70 mb-0.5 block text-sm" htmlFor="rr-role">
+                  Role <span className="text-red-400">*</span>
+                </label>
+                <select
+                  id="rr-role"
+                  required
+                  defaultValue=""
+                  className="w-full rounded-lg px-3 py-2 text-white bg-white/20 focus:outline-none focus:ring-2 focus:ring-yellow-400 text-sm"
+                >
+                  <option value="" disabled>
+                    Select role
+                  </option>
+                  <option>School</option>
+                  <option>Student</option>
+                  <option>Coordinator</option>
+                  <option>Expert</option>
+                  <option>Media</option>
+                  <option>Other</option>
+                </select>
+              </div>
+
+              {/* Resource type */}
+              <div>
+                <label className="text-white/70 mb-0.5 block text-sm" htmlFor="rr-type">
+                  Resource Type Needed <span className="text-red-400">*</span>
+                </label>
+                <select
+                  id="rr-type"
+                  required
+                  defaultValue=""
+                  className="w-full rounded-lg px-3 py-2 text-white bg-white/20 focus:outline-none focus:ring-2 focus:ring-yellow-400 text-sm"
+                >
+                  <option value="" disabled>
+                    Select resource type
+                  </option>
+                  <option>Study Material</option>
+                  <option>Branding</option>
+                  <option>Posters</option>
+                  <option>Presentation</option>
+                  <option>Other</option>
+                </select>
+              </div>
+
+              {/* Message */}
+              <div>
+                <label className="text-white/70 mb-0.5 block text-sm" htmlFor="rr-message">
+                  Message / Specific Request
+                </label>
+                <textarea
+                  id="rr-message"
+                  rows={3}
+                  placeholder="Optional details..."
+                  className="w-full rounded-lg px-3 py-2 text-white bg-white/20 focus:outline-none focus:ring-2 focus:ring-yellow-400 text-sm"
+                />
+              </div>
+
+              {/* CTA */}
+              <button
+                type="submit"
+                className="bg-yellow h-fit w-full font-medium px-3 py-2 rounded-lg hover:bg-[#e6c400] transition-all duration-300 cursor-pointer text-sm"
+              >
+                Submit Request
               </button>
-            </div>
+            </form>
           </div>
         </motion.div>
       </div>

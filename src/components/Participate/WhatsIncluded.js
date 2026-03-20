@@ -4,27 +4,23 @@ import { motion } from "framer-motion";
 
 const items = [
   {
-    label: "Phase 1 exam",
+    label: "Exam participation in all three phases",
     icon: "/participate-page/included/What's Included_01.svg",
   },
   {
-    label: "Phase 2/3 eligibility",
-    icon: "/participate-page/included/What's Included_02.svg",
-  },
-  {
-    label: "Study resources",
-    icon: "/participate-page/included/What's Included_03.svg",
-  },
-  {
-    label: "Sample papers",
-    icon: "/participate-page/included/What's Included_04.svg",
-  },
-  {
-    label: "E-certificates",
+    label: "E-certificates for all participants",
     icon: "/participate-page/included/What's Included_05.svg",
   },
   {
-    label: "Newsletter access",
+    label: "Access to learning resources and study materials",
+    icon: "/participate-page/included/What's Included_03.svg",
+  },
+  {
+    label: "Mock test access (unlimited attempts)",
+    icon: "/participate-page/included/What's Included_04.svg",
+  },
+  {
+    label: "Lifetime access to NAO newsletters",
     icon: "/participate-page/included/What's Included_06.svg",
   },
 ];
@@ -41,11 +37,20 @@ export default function WhatsIncluded() {
           transition={{ duration: 0.4 }}
           className="text-3xl md:text-4xl text-center font-bold text-orange"
         >
-          What's Included
+          What’s Included
         </motion.h2>
+        <motion.p
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.4, delay: 0.1 }}
+          className="mt-3 text-lg text-gray-700 max-w-2xl mx-auto"
+        >
+          Every registered student receives:
+        </motion.p>
 
         {/* Icons Row */}
-        <div className="mt-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 gap-y-8 lg:gap-6">
+        <div className="mt-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 justify-center gap-4 gap-y-8 lg:gap-6">
           {items.map((item, index) => (
             <motion.div
               key={item.label}

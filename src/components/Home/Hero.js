@@ -29,7 +29,7 @@ export default function Hero() {
             </h1>
 
             <p className="mt-2 md:mt-4 text-lg md:text-xl xl:text-2xl font-semibold ">
-              Igniting young minds, elevating India&apos;s skies
+              Igniting young minds, elevating India’s skies
             </p>
 
             <div className="mt-2 md:mt-3 md:text-lg xl:text-xl">

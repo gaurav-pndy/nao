@@ -15,6 +15,7 @@ import { SlSettings } from "react-icons/sl";
 
 export default function WhyAviationWhyNow() {
   return (
+
     <section className="py-12">
       <div className="max-w-5xl mx-auto px-4">
         <motion.div
@@ -29,6 +30,16 @@ export default function WhyAviationWhyNow() {
             <h2 className="text-3xl md:text-4xl  font-bold ">
               Why Aviation? Why Now?
             </h2>
+          </div>
+
+          {/* Tagline & Body text */}
+          <div className="mb-4">
+            <p className="text-lg font-semibold mb-2 text-left">
+              India’s Aviation Workforce Crisis
+            </p>
+            <p className="leading-tight lg:max-w-2xl font-medium mx-auto text-center">
+              India’s aviation sector stands at a critical juncture. As the world’s third-largest aviation market with exponential growth projections, the nation faces an unprecedented workforce shortage that threatens to undermine its aviation ambitions.
+            </p>
           </div>
 
           {/* Top Grid */}
@@ -132,6 +143,13 @@ export default function WhyAviationWhyNow() {
                 </div>
               </div>
             </motion.div>
+          </div>
+
+          {/* Closing line */}
+          <div className="mt-6 text-center">
+            <p className="italic font-medium">
+              NAO addresses this crisis through early engagement, awareness creation, and talent identification — creating India’s first structured school-to-aviation pipeline.
+            </p>
           </div>
         </motion.div>
       </div>

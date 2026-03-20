@@ -2,12 +2,12 @@
 
 import { motion } from "framer-motion";
 
-export default function PartnerHero() {
+export default function PeopleHero() {
   return (
     <section
-      className="relative bg-cover bg-center"
+      className="relative bg-cover bg-bottom-left md:bg-center"
       style={{
-        backgroundImage: "url('/partners/Partners_Hero.png')",
+        backgroundImage: "url('/about/About_Hero.png')",
         backgroundRepeat: "no-repeat",
       }}
     >
@@ -20,25 +20,13 @@ export default function PartnerHero() {
             transition={{ duration: 0.6, ease: "easeOut" }}
             className="md:w-1/2 "
           >
-            <h1 className="text-4xl md:text-5xl xl:text-6xl font-bold text-white leading-tight ">
-              Partner with NAO
+            <h1 className="text-4xl md:text-5xl xl:text-6xl font-bold text-yellow leading-tight ">
+              The People Behind NAO
             </h1>
 
-            <p className="mt-2 md:mt-4 text-white text-lg md:text-xl xl:text-2xl font-semibold max-w-xs">
-              Join the movement building India’s largest Aviation Talent Pipeline
+            <p className="mt-2 md:mt-4 text-white text-lg md:text-xl xl:text-2xl font-semibold max-w-2xl">
+              Led by India’s most accomplished aviation, academic, and policy leaders
             </p>
-
-            {/* CTA BUTTONS */}
-            <motion.div
-              className="mt-4 md:mt-6 flex  flex-wrap gap-2 md:gap-4"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.3 }}
-            >
-              <a href="#partnership-enquiry" className="bg-yellow w-full md:w-fit hover:bg-[#e6c400] text-black font-medium px-6 py-2.5 rounded-lg transition-colors inline-block text-center">
-                Become a Partner
-              </a>
-            </motion.div>
           </motion.div>
         </div>
       </div>

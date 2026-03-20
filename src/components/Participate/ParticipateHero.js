@@ -23,11 +23,11 @@ export default function ParticipateHero() {
             className="md:w-1/2 "
           >
             <h1 className="text-4xl md:text-5xl xl:text-6xl font-bold text-yellow leading-tight ">
-              How to Register for NAO 2026{" "}
+              Participate in NAO 2026
             </h1>
 
             <p className="mt-2 md:mt-4 text-white text-lg md:text-xl xl:text-2xl font-semibold ">
-              Step-by-step guide for schools and coordinators.{" "}
+              Step-by-step guide for Schools, Students, Experts and Volunteers
             </p>
 
             {/* CTA BUTTONS */}
@@ -37,13 +37,21 @@ export default function ParticipateHero() {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3 }}
             >
-              <button className="bg-yellow w-full md:w-fit hover:bg-[#e6c400] text-black font-medium px-6 py-2.5 rounded-lg transition-colors">
-                Register as a Student
-              </button>
+              <a
+                href=""
+                target="_blank"
+                className="bg-yellow w-full md:w-fit hover:bg-[#e6c400] text-black font-medium px-6 py-2.5 rounded-lg transition-colors text-center"
+              >
+                Register Your School
+              </a>
 
-              <button className="bg-red w-full md:w-fit hover:bg-[#b92520] text-white font-medium px-6 py-2.5 rounded-lg transition-colors">
-                Register as a School
-              </button>
+              <a
+                href=""
+                target="_blank"
+                className="bg-red w-full md:w-fit hover:bg-[#b92520] text-white font-medium px-6 py-2.5 rounded-lg transition-colors text-center"
+              >
+                Register as an Expert
+              </a>
             </motion.div>
           </motion.div>
         </div>

@@ -4,54 +4,104 @@ import { motion } from "framer-motion";
 
 export default function ContactForm() {
   return (
-    <section className="py-12 bg-white">
+    <section className="py-8 bg-white">
       <div className="max-w-6xl mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="flex  flex-col md:flex-row gap-4 md:gap-0 rounded-2xl overflow-hidden "
+          className="flex flex-col lg:flex-row gap-8 items-stretch"
         >
-          {/* Left Illustration Panel */}
-          <div className=" relative">
-            <img
-              src="/contact/Contact_Form.png"
-              alt="Contact illustration"
-              className="max-w-sm xl:max-w-full rounded-3xl md:rounded-none h-auto"
-            />
-          </div>
-
           {/* Form Panel */}
-          <div className="p-4 md:p-6 rounded-3xl md:rounded-none lg:p-12 bg-[#f4f7fb] w-full max-w-2xl">
+          <div className="w-full lg:w-3/5 bg-[#f4f7fb] rounded-3xl p-6 lg:p-12">
             <h3 className="text-2xl font-bold mb-8">Contact Form</h3>
 
-            <form className="space-y-4 xl:space-y-8">
-              {/* Row 1 */}
+            <form className="space-y-6">
+              {/* row 1 */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <Input label="Full name" placeholder="" />
-                <Input label="Phone number" placeholder="" />
+                <Input name="fullname" label="Full Name" required />
+                <Input name="phone" label="Phone Number" required />
               </div>
 
-              {/* Email */}
-              <Input label="E-mail address" placeholder="" active />
+              {/* row 2 */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <Input name="email" label="Email Address" type="email" required />
+                <Select
+                  name="category"
+                  label="I am a"
+                  options={[
+                    "School Principal/Teacher",
+                    "Student",
+                    "Parent",
+                    "Expert/Professional",
+                    "Partner/Sponsor",
+                    "Media",
+                    "Volunteer",
+                    "Other",
+                  ]}
+                  required
+                />
+              </div>
 
-              {/* School */}
-              <Input label="School" placeholder="" />
+              {/* row 3 */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <Input name="organization" label="School / Organization Name" />
+                <Select
+                  name="state"
+                  label="State"
+                  options={[
+                    "Andhra Pradesh",
+                    "Arunachal Pradesh",
+                    "Assam",
+                    "Bihar",
+                    "Chhattisgarh",
+                    "Goa",
+                    "Gujarat",
+                    "Haryana",
+                    "Himachal Pradesh",
+                    "Jharkhand",
+                    "Karnataka",
+                    "Kerala",
+                    "Madhya Pradesh",
+                    "Maharashtra",
+                    "Manipur",
+                    "Meghalaya",
+                    "Mizoram",
+                    "Nagaland",
+                    "Odisha",
+                    "Punjab",
+                    "Rajasthan",
+                    "Sikkim",
+                    "Tamil Nadu",
+                    "Telangana",
+                    "Tripura",
+                    "Uttar Pradesh",
+                    "Uttarakhand",
+                    "West Bengal",
+                    "Andaman & Nicobar",
+                    "Chandigarh",
+                    "Dadra & Nagar Haveli",
+                    "Daman & Diu",
+                    "Delhi",
+                    "Jammu & Kashmir",
+                    "Ladakh",
+                    "Lakshadweep",
+                  ]}
+                  required
+                />
+              </div>
 
-              {/* State */}
-              <Input label="State" placeholder="" />
+              {/* subject */}
+              <Input name="subject" label="Subject" required />
 
-              {/* Subject */}
-              <Input label="Subject" placeholder="" />
-
-              {/* Message */}
+              {/* message */}
               <div>
-                <label className="text-xs text-gray-500 mb-1 block">
-                  Message
-                </label>
+                <label className="text-sm font-medium mb-1 block">Message</label>
                 <textarea
+                  name="message"
                   rows={5}
+                  maxLength={2000}
                   className="w-full bg-white border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:border-blue-500"
                 />
                 <p className="text-[11px] text-gray-400 text-right mt-1">
@@ -59,14 +109,27 @@ export default function ContactForm() {
                 </p>
               </div>
 
-              {/* Submit */}
               <button
                 type="submit"
-                className="bg-yellow h-fit min-w-44  font-medium px-4 py-2.5 rounded-lg hover:bg-[#e6c400] transition-all duration-300 cursor-pointer"
+                className="bg-yellow w-full md:w-auto font-medium px-6 py-2.5 rounded-lg hover:bg-[#e6c400] transition-all duration-300"
               >
                 Submit
               </button>
             </form>
+          </div>
+
+          {/* Map Embed */}
+          <div className="w-full lg:w-1/2 flex">
+            <div className="flex-1 h-full rounded-3xl overflow-hidden">
+              <iframe
+                src="https://www.google.com/maps?q=NAO+Secretariat,+B-1+Third+Floor,+Greater+Kailash+Enclave+II,+New+Delhi+110048&output=embed"
+                width="100%"
+                height="100%"
+                className="border-0"
+                allowFullScreen=""
+                loading="lazy"
+              ></iframe>
+            </div>
           </div>
         </motion.div>
       </div>
@@ -75,19 +138,49 @@ export default function ContactForm() {
 }
 
 /* ---------- Reusable Input ---------- */
-function Input({ label, placeholder, active }) {
+function Input({ label, name, type = "text", required }) {
   return (
     <div>
       <label
-        className={`text-sm mb-1 block focus:text-blue-600 text-gray-500      }`}
+        htmlFor={name}
+        className="text-sm mb-1 block text-gray-500"
       >
-        {label}
+        {label}{required && <span className="text-red-500"> *</span>}
       </label>
       <input
-        placeholder={placeholder}
-        className={`w-full border-b bg-transparent font-medium py-1 focus:border-b! focus:border-blue-500! border-gray-300 
-        `}
+        id={name}
+        name={name}
+        type={type}
+        required={required}
+        className="w-full border-b bg-transparent font-medium py-1 focus:outline-none focus:border-blue-500 border-gray-300"
       />
+    </div>
+  );
+}
+
+/* ---------- Select Component ---------- */
+function Select({ label, name, options, required }) {
+  return (
+    <div>
+      <label
+        htmlFor={name}
+        className="text-sm mb-1 block text-gray-500"
+      >
+        {label}{required && <span className="text-red-500"> *</span>}
+      </label>
+      <select
+        id={name}
+        name={name}
+        required={required}
+        className="w-full border-b bg-transparent font-medium py-1 focus:outline-none focus:border-blue-500 border-gray-300"
+      >
+        <option value="">Select {label}</option>
+        {options.map((opt) => (
+          <option key={opt} value={opt}>
+            {opt}
+          </option>
+        ))}
+      </select>
     </div>
   );
 }

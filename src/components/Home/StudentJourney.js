@@ -5,20 +5,23 @@ import { motion } from "framer-motion";
 const phases = [
   {
     phase: "Phase 1",
-    title: "School Level",
-    date: "(August 2026)",
+    title: "School Level Examination",
+    date: "August 2026",
+    details: "Online / Offline School Level Screening test (90 Minutes) – Top 3 from Group 1 + Top 2 from Group 2 qualify per school.",
     icon: "/journey/01.png",
   },
   {
     phase: "Phase 2",
-    title: "State/UT Level",
-    date: "(October 2026)",
+    title: "State/UT Rounds",
+    date: "October 2026",
+    details: "Online / Offline State Level Screening Test – Top 3 from Group 1 + Top 2 from Group 2 per State / UT qualify for National Level.",
     icon: "/journey/02.png",
   },
   {
     phase: "Phase 3",
-    title: "National Finale",
-    date: "(December 2026)",
+    title: "National Finals",
+    date: "7 December 2026",
+    details: "145 National Finalists in New Delhi: quizzes, viva with aviation experts, presentations, and aviation experience sessions.",
     icon: "/journey/03.png",
   },
 ];
@@ -46,9 +49,8 @@ export default function StudentJourney() {
           transition={{ duration: 0.5, delay: 0.1 }}
           className="mt-4 font-medium md:text-lg "
         >
-          Students (Indian Citizens) from Classes 8 to 12 can participate in a
-          structured three phase Olympiad. <br />
-          Group 1: Classes 8, 9 & 10; Group 2: Classes 11 & 12
+          A structured three-phase Olympiad designed to identify, nurture, and
+          celebrate aviation talent.
         </motion.p>
 
         {/* Journey */}
@@ -86,11 +88,14 @@ export default function StudentJourney() {
                     index !== phases.length - 1 && "md:mr-12 lg:mr-16"
                   } `}
                 >
-                  <p className="   text-blue">{item.phase}</p>
-                  <p className="text-lg leading-4 mt-2 font-semibold text-blue">
+                  <p className="text-blue font-semibold">{item.phase}</p>
+                  <p className="text-lg leading-5 mt-2 font-semibold text-blue">
                     {item.title}
                   </p>
-                  <p className=" font-semibold text-blue">{item.date}</p>
+                  <p className="text-sm text-blue mt-1">{item.date}</p>
+                  <p className="mt-2 text-sm text-gray-600 max-w-xs mx-auto">
+                    {item.details}
+                  </p>
                 </div>
                 {index !== phases.length - 1 && (
                   <div className="md:hidden mt-4 flex  items-center ">

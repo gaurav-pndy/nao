@@ -19,7 +19,7 @@ export default function AboutCSO() {
       {/* Content */}
       <div className="relative z-10 max-w-6xl mx-auto px-4">
         <h2 className="text-3xl md:text-4xl text-center font-bold text-orange">
-          About Organizer
+          About Centre for Scientific Outreach (CSO)
         </h2>
         <motion.div
           initial={{ opacity: 0, x: -30 }}
@@ -43,12 +43,27 @@ export default function AboutCSO() {
           {/* Description */}
           <p className="text-lg font-medium ">
             The Centre for Scientific Outreach (CSO) is a Not-for-Profit
-            organisation dedicated to promoting scientific awareness and
+            organization dedicated to promoting scientific awareness and
             education across India. Through NAO, CSO aims to create a
             sustainable platform for aviation education and career development
-            across India, contributing to India’s position as s global aviation
+            across India, contributing to India’s position as a global aviation
             leader.
           </p>
+
+          {/* Motto */}
+          <p className="mt-6 italic text-center">
+            सा विद्या या विमुक्तये  — That is knowledge which liberates.
+          </p>
+          {/* CTA */}
+          <div className="mt-4 text-center">
+            <a
+              href="https://www.thecso.in"
+              target="_blank"
+              className="inline-block bg-yellow text-black font-medium px-6 py-2 rounded-lg hover:bg-[#e6c400] transition-colors"
+            >
+              Visit CSO Website
+            </a>
+          </div>
         </motion.div>
       </div>
     </section>

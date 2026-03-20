@@ -64,10 +64,10 @@ export default function NAOCommittee() {
           className="text-center mb-8"
         >
           <h2 className="text-3xl md:text-4xl text-center font-bold text-orange">
-            NAO Committee
+            Guided by 100+ Aviation Experts
           </h2>
           <p className="mt-4 font-medium md:text-lg ">
-            Led by Who’s Who of the Aviation Ecosystem
+            NAO’s curriculum, examinations, and evaluation are overseen by a structured Expert Committee ensuring academic rigor, industry relevance, and policy alignment consistent with ICAO’s NGAP initiative.
           </p>
         </motion.div>
 
@@ -124,13 +124,19 @@ export default function NAOCommittee() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3 }}
         >
-          <button className="bg-yellow cursor-pointer  w-full md:w-fit hover:bg-[#e6c400] text-black font-medium px-6 py-2.5 rounded-lg transition-colors">
-            Eligibility Criteria
-          </button>
+          <Link
+            href="/people"
+            className="bg-yellow cursor-pointer  w-full md:w-fit hover:bg-[#e6c400] text-black font-medium px-6 py-2.5 rounded-lg transition-colors"
+          >
+            Meet Our Experts
+          </Link>
 
-          <button className="bg-red  cursor-pointer w-full md:w-fit hover:bg-[#b92520] text-white font-medium px-6 py-2.5 rounded-lg transition-colors">
+          <Link
+            href="/people#eligibility"
+            className="bg-red  cursor-pointer w-full md:w-fit hover:bg-[#b92520] text-white font-medium px-6 py-2.5 rounded-lg transition-colors"
+          >
             Nominate Expert
-          </button>
+          </Link>
         </motion.div>
       </div>
     </section>

@@ -19,7 +19,7 @@ export default function Objectives() {
         <div className="grid md:grid-cols-2 gap-6 mt-8">
           <Objective
             title="Inspiration"
-            text="Inspire and nurture 100,000+ students in the first edition through a structured Olympiad, mentorship, and exposure programs "
+            text="Inspire and nurture students through a structured Olympiad, mentorship, and exposure programs."
           />
           <Objective
             title="Career Awareness"
@@ -35,7 +35,7 @@ export default function Objectives() {
           />
           <Objective
             title="National Workforce Pipeline"
-            text="e.Build a structured feeder system supporting India’s growing need for aviation professionals."
+            text="Build a structured feeder system supporting India’s growing need for aviation professionals."
             full
           />
         </div>

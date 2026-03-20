@@ -1,66 +1,122 @@
 "use client";
 
+import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { FaCheck, FaCheckCircle } from "react-icons/fa";
-import { GiCheckMark } from "react-icons/gi";
+import { FaCheck } from "react-icons/fa";
 
-const benefits = [
-  "Brand presence",
-  "Event visibility",
-  "Speaking opportunities",
-  "Co-branded content",
-  "Impact reports",
+
+export const tiers = [
+  {
+    name: "Lead Sponsorship",
+    has: [true, true, true, true, true, true, true, true, true, true],
+  },
+  {
+    name: "Content Sponsorship",
+    has: [true, true, true, true, true, false, false, false, false, false],
+  },
+  {
+    name: "Demographic Sponsorship",
+    has: [true, false, false, true, true, false, true, false, false, false],
+  },
 ];
+const combined = [
+  "Logo on NAO website, materials & certificates",
+  "Branding at all NAO events & examination centres",
+  "Digital visibility across NAO social media channels",
+  "Speaking & jury opportunities at Zonal & National rounds",
+  "Co-branded content & press releases",
+  "Access to NAO Talent Registry (for recruitment-oriented partners)",
+  "Dedicated impact report with metrics",
+  "Scholarship naming rights (for scholarship sponsors)",
+  "Exhibition / booth space at National Finals",
+  "Feature in NAO Annual Report & Newsletter",
+].map((text, idx) => {
+  const freq = tiers.reduce((sum, t) => sum + (t.has[idx] ? 1 : 0), 0);
+  return { text, idx, freq };
+});
+combined.sort((a, b) => b.freq - a.freq);
 
 export default function WhatYouGet() {
+  const [hoveredCol, setHoveredCol] = useState(null);
+
   return (
     <section className="py-12">
-      <div className="max-w-5xl mx-auto px-4">
+      <div className="max-w-7xl mx-auto px-4 overflow-x-auto">
         {/* Heading */}
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="text-3xl md:text-4xl text-center font-bold text-orange mb-8"
+          className="text-3xl md:text-4xl text-center font-bold text-orange mb-4"
         >
-          What you will get
+          Sponsorship Deliverables
         </motion.h2>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center text-lg text-gray-700 mb-8"
+        >
+          Comprehensive engagement across digital, physical, and experiential touchpoints
+        </motion.p>
 
-        {/* Content */}
-        <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          {/* Left list */}
-          <motion.ul
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-            className="space-y-4 lg:space-y-5"
-          >
-            {benefits.map((item, index) => (
-              <li key={item} className="flex items-center gap-3">
-                <div className="flex justify-center items-center p-1.5 bg-[#2cb72c] rounded-full shrink-0 mt-1">
-                  <GiCheckMark className="text-white text-lg  shrink-0" />
-                </div>
-                <span className="text-2xl   font-medium">{item}</span>
-              </li>
-            ))}
-          </motion.ul>
-
-          {/* Right image */}
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-            className="rounded-xl overflow-hidden shadow-sm"
-          >
-            <img
-              src="/partners/What_You_Will_Get.png"
-              alt="Partner benefits"
-              className="w-full h-auto object-cover"
-            />
-          </motion.div>
+        {/* comparison matrix */}
+        <div className="relative overflow-x-auto rounded-lg shadow-md">
+          <table className="w-full table-fixed border-collapse">
+            <thead className="bg-white">
+              <motion.tr
+                initial={{ y: -20, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.5 }}
+              >
+                <th className="text-left p-3"></th>
+                {tiers.map((tier, idx) => (
+                  <th
+                    key={idx}
+                    className="p-3 text-center font-medium whitespace-nowrap cursor-default"
+                    onMouseEnter={() => setHoveredCol(idx)}
+                    onMouseLeave={() => setHoveredCol(null)}
+                    style={{ position: 'sticky', top: 0, zIndex: 10 }}
+                  >
+                    {tier.name}
+                  </th>
+                ))}
+              </motion.tr>
+            </thead>
+            <motion.tbody>
+              {combined.map((entry, row) => (
+                <motion.tr
+                  key={row}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: row * 0.03 }}
+                  className={`border-t ${
+                    row % 2 === 0 ? 'bg-gray-50' : 'bg-white'
+                  } hover:bg-yellow/10 cursor-default`}
+                >
+                  <td className="p-3 align-top text-sm text-left max-w-xs">
+                    {entry.text}
+                  </td>
+                  {tiers.map((tier, col) => (
+                    <td
+                      key={col}
+                      className={`p-3 text-center align-top ${
+                        hoveredCol === col ? 'bg-yellow/20' : ''
+                      }`}
+                    >
+                      {tier.has[entry.idx] ? (
+                        <FaCheck className="text-green-600 mx-auto text-xl" />
+                      ) : (
+                        <span className="text-gray-300">—</span>
+                      )}
+                    </td>
+                  ))}
+                </motion.tr>
+              ))}
+            </motion.tbody>
+          </table>
         </div>
       </div>
     </section>

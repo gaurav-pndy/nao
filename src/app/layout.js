@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import "./globals.css";
 
 import { Inter_Tight } from "next/font/google";
+import ConnectWithUs from "@/components/ConnectWithUs";
 import Footer from "@/components/Footer";
 
 const inter = Inter_Tight({
@@ -59,6 +60,7 @@ export default function RootLayout({ children }) {
       <body className={`antialiased bg-white ${inter.variable} text-[#2d333a]`}>
         <Header />
         <main className="mt-8 md:mt-12">{children}</main>
+        <ConnectWithUs />
         <Footer />
       </body>
     </html>

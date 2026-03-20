@@ -20,31 +20,19 @@ export default function NeedForNAO() {
             <div className="py-6 md:py-12">
               {" "}
               <h3 className="text-3xl lg:text-4xl mb-8 font-bold ">
-                {" "}
-                Why NAO Exists{" "}
-              </h3>{" "}
+                What is NAO?
+              </h3>
               <p className="  leading-tight lg:max-w-2xl font-medium mb-2">
-                {" "}
-                India is entering a transformative era in aviation. With
-                unprecedented growth in air travel, projected fleet expansion,
-                emerging drone ecosystems, and increasing global interest in
-                aerospace, the nation faces an urgent need to develop a skilled,
-                future-ready aviation workforce.{" "}
+                The National Aviation Olympiad (NAO) is the 1st Pan-India Olympiad dedicated 
+                exclusively to aviation for school students in Grades 8–12. Organized by the 
+                Centre for Scientific Outreach (CSO) in collaboration with industry and academic 
+                partners, NAO aims to introduce young minds to aviation, drones, and sustainability 
+                while addressing the skill gap in India’s rapidly expanding aviation industry.
               </p>{" "}
-              <p className="  leading-tight lg:max-w-2xl font-medium mb-2">
-                The National Aviation Olympiad (NAO) is conceived as India’s
-                most comprehensive youth aviation initiative – aligning with
-                global ICAO NGAP (Next Generation Aviation Professionals)
-                objectives and the national vision for India@2047.{" "}
-              </p>{" "}
-              <p className=" leading-tight lg:max-w-2xl font-medium">
-                NAO aims to inspire, educate, and prepare students from Classes
-                8th–12th to pursue careers across more than 150+ aviation,
-                aerospace, drone, and airport roles. It is positioned not merely
-                as a competition, but as a National Aviation Movement to create
-                India’s next generation of aviators, engineers, technologists,
-                innovators, and leaders.
-              </p>{" "}
+              <p className="  leading-tight lg:max-w-2xl font-medium">
+                NAO is not just a competition — it is a <strong>national capability-building mission</strong> that 
+                aims to empower every child in India with the possibility of flight.
+              </p>{""}
             </div>{" "}
             {/* Illustration */}{" "}
             <div className="flex justify-center  md:justify-end">

@@ -22,24 +22,37 @@ export default function ResourcesHero() {
             transition={{ duration: 0.6, ease: "easeOut" }}
             className="md:w-1/2 "
           >
-            <h1 className="text-4xl md:text-5xl xl:text-6xl font-bold text-white leading-tight ">
-              NAO Resources & Downloads
+            <h1 className="text-4xl md:text-5xl xl:text-6xl font-bold text-yellow leading-tight ">
+              NAO Resources & Study Material
             </h1>
 
             {/* CTA BUTTONS */}
+            <motion.p className="mt-4 text-white text-lg md:text-xl font-semibold max-w-2xl">
+              Everything you need to prepare for the National Aviation Olympiad
+            </motion.p>
             <motion.div
               className="mt-4 md:mt-6 flex  flex-wrap gap-2 md:gap-4"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3 }}
             >
-              <button className="bg-yellow w-full md:w-fit hover:bg-[#e6c400] text-black font-medium px-6 py-2.5 rounded-lg transition-colors">
-                Register as a Student
-              </button>
+              <a
+                href="https://forms.zohopublic.com/example/schoolregistration"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-yellow w-full md:w-fit hover:bg-[#e6c400] text-black font-medium px-6 py-2.5 rounded-lg transition-colors inline-block text-center"
+              >
+                Register Your School
+              </a>
 
-              <button className="bg-red w-full md:w-fit hover:bg-[#b92520] text-white font-medium px-6 py-2.5 rounded-lg transition-colors">
-                Register as a School
-              </button>
+              <a
+                href="/docs/NAO_Syllabus.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-red w-full md:w-fit hover:bg-[#b92520] text-white font-medium px-6 py-2.5 rounded-lg transition-colors inline-block text-center"
+              >
+                Download Syllabus
+              </a>
             </motion.div>
           </motion.div>
         </div>

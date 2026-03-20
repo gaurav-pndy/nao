@@ -7,45 +7,45 @@ const categories = [
     title: "For Schools",
     color: "bg-[#ea7d18]",
     items: [
-      "NAO Overview",
-      "School Guidebook",
-      "Registration Form",
-      "MoU",
-      "Posters",
-      "Presentation",
+      { name: "NAO Overview Brochure", href: "#", size: "TBD" },
+      { name: "School Guidebook", href: "#", size: "TBD" },
+      { name: "School Registration Guide", href: "#", size: "TBD" },
+      { name: "MoU Template", href: "#", size: "TBD" },
+      { name: "NAO Posters — A3 & A4 Printable", href: "#", size: "TBD" },
+      { name: "School Presentation Deck", href: "#", size: "TBD" },
     ],
   },
   {
     title: "For Students",
     color: "bg-[#63b34b]",
     items: [
-      "Syllabus",
-      "Sample papers",
-      "Practice questions",
-      "Aviation glossary",
-      "Formula sheets",
+      { name: "Olympiad Syllabus", href: "#", size: "TBD" },
+      { name: "Examination Structure", href: "#", size: "TBD" },
+      { name: "Practice Questions Bank", href: "#", size: "TBD" },
+      { name: "Aviation Glossary", href: "#", size: "TBD" },
+      { name: "Recommended Reading List", href: "#", size: "TBD" },
     ],
   },
   {
     title: "For Coordinators",
     color: "bg-[#56a6b1]",
     items: [
-      "Handbook",
-      "Registration template",
-      "Upload guidelines",
-      "Communication templates",
-      "Troubleshooting guide",
+      { name: "Coordinator Handbook", href: "#", size: "TBD" },
+      { name: "Student Registration Template", href: "#", size: "TBD" },
+      { name: "Data Upload Guidelines", href: "#", size: "TBD" },
+      { name: "Communication Templates — Letters, Emails", href: "#", size: "TBD" },
+      { name: "FAQ & Troubleshooting Guide", href: "#", size: "TBD" },
     ],
   },
   {
     title: "Media Resources",
     color: "bg-[#0061e5]",
     items: [
-      "Logos",
-      "Branding guidelines",
-      "Photos",
-      "Fact sheets",
-      "Press release template",
+      { name: "NAO Logo Pack — All formats", href: "#", size: "TBD" },
+      { name: "Brand Guidelines", href: "#", size: "TBD" },
+      { name: "Event Photos — High Resolution", href: "#", size: "TBD" },
+      { name: "NAO Fact Sheet", href: "#", size: "TBD" },
+      { name: "Press Release Template", href: "#", size: "TBD" },
     ],
   },
 ];
@@ -62,12 +62,12 @@ export default function Categories() {
           transition={{ duration: 0.5 }}
           className="text-3xl md:text-4xl text-center font-bold text-orange"
         >
-          Categories
+          Downloadable Resources
         </motion.h2>
 
         <p className="mt-4 max-w-3xl mx-auto md:text-lg font-medium">
-          {" "}
-          Download the resources here.
+          Choose a category and click the icon to download the file. Actual links
+          will be populated once assets are available.
         </p>
 
         {/* Cards */}
@@ -92,10 +92,35 @@ export default function Categories() {
               <ul className="px-4 py-2 font-medium ">
                 {cat.items.map((item) => (
                   <li
-                    key={item}
+                    key={item.name}
                     className="py-2.5 border-b-2 border-dashed border-slate-400 last:border-none"
                   >
-                    {item}
+                    <a
+                      href={item.href}
+                      className="flex justify-between items-center hover:text-blue-600"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <span>{item.name}</span>
+                      <span className="flex items-center space-x-1 text-sm text-slate-600">
+                        {/* download icon */}
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="h-4 w-4"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4"
+                          />
+                        </svg>
+                        <span>{item.size}</span>
+                      </span>
+                    </a>
                   </li>
                 ))}
               </ul>
