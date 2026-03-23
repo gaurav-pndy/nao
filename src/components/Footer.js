@@ -205,16 +205,16 @@ export default function Footer() {
               <motion.a
                 href="https://wa.me/+919211229927"
                 target="_blank"
-                className="w-8 h-8 bg-black rounded-full hover:scale-110 transition-all duration-300 flex justify-center items-center p-1 relative"
+                className="w-8 h-8 bg-white rounded-full hover:scale-110 transition-all duration-300 flex justify-center items-center p-1 relative"
               >
-                <FaWhatsapp className="text-white text-lg" />
+                <FaWhatsapp className="text-black text-lg" />
               </motion.a>
               <motion.a
                 href="mailto:nao@thecso.in"
                 target="_blank"
-                className="w-8 h-8 bg-black rounded-full hover:scale-110 transition-all duration-300 flex justify-center items-center p-1 relative"
+                className="w-8 h-8 bg-white rounded-full hover:scale-110 transition-all duration-300 flex justify-center items-center p-1 relative"
               >
-                <MdOutlineEmail className="text-white text-lg" />
+                <MdOutlineEmail className="text-black text-lg" />
               </motion.a>
             </div>
           </motion.div>
@@ -222,15 +222,14 @@ export default function Footer() {
       </div>
 
       {/* Bottom Bar */}
-      <div className=" bg-[#f5f5fa]  py-4 ">
-        <div className="max-w-5xl  mx-auto px-4 flex flex-col lg:flex-row justify-between items-center font-semibold text-slate-600 gap-4 text-sm md:text-base lg:gap-10 text-center md:text-left">
+      <div className="bg-[#f5f5fa] py-4">
+        <div className="max-w-5xl mx-auto px-4 flex flex-col lg:flex-row justify-between items-center text-slate-600 gap-4 text-sm text-center md:text-left">
           <p>
             © 2026{" "}
-            <span className="text-orange ">National Aviation Olympiad</span>.
-            All rights reserved.
+            <span className="text-orange">National Aviation Olympiad</span>. All
+            rights reserved.
           </p>
-
-          <div className="flex flex-row justify-between items-center  gap-4 md:gap-6 lg:gap-10">
+          <div className="flex flex-row justify-between items-center gap-4 md:gap-6 lg:gap-10">
             <Link
               href="/privacy-policy"
               className="hover:text-orange transition-all duration-300"
@@ -252,7 +251,6 @@ export default function Footer() {
           </div>
         </div>
       </div>
-
       {/* Bottom Gradient Strip */}
       <div
         className="absolute bottom-0 left-0 w-full h-2"

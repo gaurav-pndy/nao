@@ -67,18 +67,19 @@ export default function NAOHighlights() {
                   “{item.quote}”
                 </p>
                 {/* Footer */}
-                <div className=" flex items-center justify-between">
-                  {/* Name */}
-                  <span className=" md:text-xl font-medium text-yellow max-w-[70%] whitespace-pre-line">
-                    {item.name}
-                  </span>
-
+                <div className="flex flex-col items-center justify-between gap-3">
                   {/* Image */}
                   <img
                     src={item.image}
                     alt={item.name}
                     className="w-24 h-24 md:w-32 md:h-32 object-top rounded-full object-cover border-4 border-white shadow-lg"
                   />
+                  {/* Name */}
+                  <span className=" md:text-xl font-medium text-yellow max-w-[70%] whitespace-pre-line text-center">
+                    {item.name}
+                  </span>
+
+                  
                 </div>
               </motion.div>
             </SwiperSlide>

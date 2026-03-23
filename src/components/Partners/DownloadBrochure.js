@@ -15,7 +15,7 @@ export default function DownloadBrochure() {
       phone: form.phone.value,
       tier: form.tier.value,
     };
-    const pdfUrl = "/partners/NAO_2026_Brochure.pdf";
+    const pdfUrl = "/partners/NAO_2026_Sponsorship_Brochure.pdf";
     const link = document.createElement("a");
     link.href = pdfUrl;
     link.download = "NAO_2026_Brochure.pdf";
@@ -43,86 +43,94 @@ export default function DownloadBrochure() {
               Download detailed partnership options and deliverables.
             </p>
 
-              <form
-                className="space-y-4"
-                onSubmit={handleSubmit}
-              >
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div>
-                    <p className="text-white/60 mb-2">Full Name</p>
-                    <input
-                      type="text"
-                      name="fullName"
-                      required
-                      placeholder="Your full name"
-                      className="w-full rounded-lg px-4 py-2.5 text-white focus:outline-none focus:ring-2 focus:ring-yellow-400 bg-white/20"
-                    />
-                  </div>
-                  <div>
-                    <p className="text-white/60 mb-2">Organization Name</p>
-                    <input
-                      type="text"
-                      name="organization"
-                      required
-                      placeholder="Organization"
-                      className="w-full rounded-lg px-4 py-2.5 text-white focus:outline-none focus:ring-2 focus:ring-yellow-400 bg-white/20"
-                    />
-                  </div>
-                  <div>
-                    <p className="text-white/60 mb-2">Designation</p>
-                    <input
-                      type="text"
-                      name="designation"
-                      required
-                      placeholder="Your designation"
-                      className="w-full rounded-lg px-4 py-2.5 text-white focus:outline-none focus:ring-2 focus:ring-yellow-400 bg-white/20"
-                    />
-                  </div>
-                  <div>
-                    <p className="text-white/60 mb-2">Email</p>
-                    <input
-                      type="email"
-                      name="email"
-                      required
-                      placeholder="Enter Your Email"
-                      className="w-full rounded-lg px-4 py-2.5 text-white focus:outline-none focus:ring-2 focus:ring-yellow-400 bg-white/20"
-                    />
-                  </div>
-                  <div>
-                    <p className="text-white/60 mb-2">Phone</p>
-                    <input
-                      type="tel"
-                      name="phone"
-                      required
-                      placeholder="Your phone number"
-                      className="w-full rounded-lg px-4 py-2.5 text-white focus:outline-none focus:ring-2 focus:ring-yellow-400 bg-white/20"
-                    />
-                  </div>
-                  <div>
-                    <p className="text-white/60 mb-2">Partnership Tier (optional)</p>
-                    <select
-                      name="tier"
-                      className="w-full rounded-lg px-4 py-2.5 text-white focus:outline-none focus:ring-2 focus:ring-yellow-400 bg-white/20"
-                    >
-                      <option value="">Select tier</option>
-                      {tiers.map((t, i) => (
-                        <option key={i} value={t.name}>
-                          {t.name}
-                        </option>
-                      ))}
-                    </select>
-                  </div>
+            <form className="space-y-4" onSubmit={handleSubmit}>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <p className="text-white/60 mb-2">Full Name</p>
+                  <input
+                    type="text"
+                    name="fullName"
+                    required
+                    placeholder="Your full name"
+                    className="w-full rounded-lg px-4 py-2.5 text-white focus:outline-none focus:ring-2 focus:ring-yellow-400 bg-white/20"
+                  />
                 </div>
+                <div>
+                  <p className="text-white/60 mb-2">Organization Name</p>
+                  <input
+                    type="text"
+                    name="organization"
+                    required
+                    placeholder="Organization"
+                    className="w-full rounded-lg px-4 py-2.5 text-white focus:outline-none focus:ring-2 focus:ring-yellow-400 bg-white/20"
+                  />
+                </div>
+                <div>
+                  <p className="text-white/60 mb-2">Designation</p>
+                  <input
+                    type="text"
+                    name="designation"
+                    required
+                    placeholder="Your designation"
+                    className="w-full rounded-lg px-4 py-2.5 text-white focus:outline-none focus:ring-2 focus:ring-yellow-400 bg-white/20"
+                  />
+                </div>
+                <div>
+                  <p className="text-white/60 mb-2">Email</p>
+                  <input
+                    type="email"
+                    name="email"
+                    required
+                    placeholder="Enter Your Email"
+                    className="w-full rounded-lg px-4 py-2.5 text-white focus:outline-none focus:ring-2 focus:ring-yellow-400 bg-white/20"
+                  />
+                </div>
+                <div>
+                  <p className="text-white/60 mb-2">Phone</p>
+                  <input
+                    type="tel"
+                    name="phone"
+                    required
+                    placeholder="Your phone number"
+                    className="w-full rounded-lg px-4 py-2.5 text-white focus:outline-none focus:ring-2 focus:ring-yellow-400 bg-white/20"
+                  />
+                </div>
+                <div>
+                  <p className="text-white/60 mb-2">
+                    Partnership Tier (optional)
+                  </p>
 
-                <div className="text-right md:col-span-2">
-                  <button
-                    type="submit"
-                    className="w-full bg-yellow font-medium px-4 py-2.5 rounded-lg hover:bg-[#e6c400] transition-all duration-300 cursor-pointer"
+                  <select
+                    name="tier"
+                    className="w-full rounded-lg px-4 py-2.5 text-white bg-white/20 focus:outline-none focus:ring-2 focus:ring-yellow-400 appearance-none"
+                    style={{
+                      backgroundImage: `url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg>')`,
+                      backgroundRepeat: "no-repeat",
+                      backgroundPosition: "right 1rem center",
+                      backgroundSize: "1.25rem",
+                    }}
                   >
-                    Download Now
-                  </button>
+                    <option value="" disabled className="text-black">
+                      Select tier
+                    </option>
+                    {tiers.map((t, i) => (
+                      <option key={i} value={t.name} className="text-black">
+                        {t.name}
+                      </option>
+                    ))}
+                  </select>
                 </div>
-              </form>
+              </div>
+
+              <div className="text-right md:col-span-2">
+                <button
+                  type="submit"
+                  className="w-full bg-yellow font-medium px-4 py-2.5 rounded-lg hover:bg-[#e6c400] transition-all duration-300 cursor-pointer"
+                >
+                  Download Now
+                </button>
+              </div>
+            </form>
           </div>
 
           <div

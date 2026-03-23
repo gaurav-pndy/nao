@@ -20,7 +20,7 @@ export default function PeopleHero() {
             transition={{ duration: 0.6, ease: "easeOut" }}
             className="md:w-1/2 "
           >
-            <h1 className="text-4xl md:text-5xl xl:text-6xl font-bold text-yellow leading-tight ">
+            <h1 className="text-4xl md:text-5xl xl:text-6xl font-bold text-yellow leading-tight max-w-sm">
               The People Behind NAO
             </h1>
 

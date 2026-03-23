@@ -2,7 +2,16 @@
 
 import { motion } from "framer-motion";
 import { FiLink, FiGlobe } from "react-icons/fi";
-import { FaGavel, FaPlane, FaUniversity, FaGlobeAmericas, FaPlaneDeparture, FaCity, FaGlobe, FaGraduationCap } from "react-icons/fa";
+import {
+  FaGavel,
+  FaPlane,
+  FaUniversity,
+  FaGlobeAmericas,
+  FaPlaneDeparture,
+  FaCity,
+  FaGlobe,
+  FaGraduationCap,
+} from "react-icons/fa";
 
 const links = [
   {
@@ -75,20 +84,22 @@ export default function ExternalLinks() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.06 }}
-                className="flex flex-col justify-center bg-[#964090] hover:bg-[#652a61] text-white py-2 px-3 rounded-md transition-all duration-300 border border-transparent hover:border-white/30"
+                className="flex flex-col justify-center bg-[#964090] hover:bg-[#652a61] text-white rounded-md transition-all duration-300 border border-transparent hover:border-white/30"
               >
-                <div className="flex items-center w-full">
-                  <div className="flex items-center space-x-1">
+                <div className="flex items-center w-full px-4 py-4 gap-4">
+                  <div className="flex items-center space-x-1 shrink-0">
                     <div className="bg-white/20 rounded-full p-0.5">
                       <Icon className="text-base text-white" />
                     </div>
                     <span className="font-medium text-sm">{item.label}</span>
                   </div>
-                  <FiLink className="ml-auto text-base" />
+
+                  <p className="text-sm font-semibold italic text-white flex-1 mx-3">
+                    {item.desc}
+                  </p>
+
+                  <FiLink className="text-base shrink-0 ml-auto" />
                 </div>
-                <p className="mt-0.25 text-sm font-semibold italic text-white">
-                  {item.desc}
-                </p>
               </motion.a>
             );
           })}

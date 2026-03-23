@@ -37,7 +37,7 @@ export default function WhyAviationWhyNow() {
             <p className="text-lg font-semibold mb-2 text-left">
               India’s Aviation Workforce Crisis
             </p>
-            <p className="leading-tight lg:max-w-2xl font-medium mx-auto text-center">
+            <p className="leading-tight lg:max-w-2xl font-medium text-left">
               India’s aviation sector stands at a critical juncture. As the world’s third-largest aviation market with exponential growth projections, the nation faces an unprecedented workforce shortage that threatens to undermine its aviation ambitions.
             </p>
           </div>
@@ -99,7 +99,7 @@ export default function WhyAviationWhyNow() {
                 <DemandRow
                   icon={<SlSettings />}
                   value="26,000"
-                  label="Mechanics"
+                  label="Technicians"
                   tag="Technical"
                   tagColor="bg-orange-100 text-orange-700"
                 />
@@ -148,7 +148,7 @@ export default function WhyAviationWhyNow() {
           {/* Closing line */}
           <div className="mt-6 text-center">
             <p className="italic font-medium">
-              NAO addresses this crisis through early engagement, awareness creation, and talent identification — creating India’s first structured school-to-aviation pipeline.
+              NAO addresses this crisis through early engagement, awareness creation, and talent identification — creating India’s first structured school-to-aviation industry pipeline.
             </p>
           </div>
         </motion.div>

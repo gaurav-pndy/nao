@@ -10,6 +10,8 @@ export default function ParticipateHero() {
       className="relative bg-cover bg-bottom-left md:bg-center"
       style={{
         backgroundImage: "url('/participate-page/Participate_Hero.png')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
       }}
     >
@@ -31,6 +33,7 @@ export default function ParticipateHero() {
             </p>
 
             {/* CTA BUTTONS */}
+            {/* add forms here */}
             <motion.div
               className="mt-4 md:mt-6 flex  flex-wrap gap-2 md:gap-4"
               initial={{ opacity: 0 }}

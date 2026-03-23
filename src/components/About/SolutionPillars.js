@@ -42,7 +42,7 @@ const pillars = [
     items: [
       "Airport & ATC tower visits",
       "MRO Hangar Tours",
-      "Drone Flying Zones",
+      "Drone Flying Training",
       "Pilot & Engineer Interactions",
       "Industry Expert Webinars",
     ],
@@ -53,7 +53,7 @@ const pillars = [
     items: [
       "National aviation aptitude ranking system",
       "NAO Aviation Talent Registry",
-      "Longitudinal tracking of aspirants",
+      "Aviation Talent Progression Support",
     ],
   },
   {
@@ -63,7 +63,7 @@ const pillars = [
       "Partnerships with educational institutions",
       "Partnerships with Skill Development bodies",
       "Partnership with DGCA approved institutes",
-      "Pathway alignment with NSQF, EASA, ICAO competency models ",
+      "Pathway alignment with NSQF, EASA, ICAO competency models",
     ],
   },
   {
@@ -105,7 +105,7 @@ export default function SolutionPillars() {
         {/* Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
           {pillars.map((pillar, index) => (
-            <FlipCard key={pillar.title} pillar={pillar} index={index} />
+            <HoverCard key={pillar.title} pillar={pillar} index={index} />
           ))}
         </div>
       </div>
@@ -113,10 +113,10 @@ export default function SolutionPillars() {
   );
 }
 
-/* ------------------ Flip Card ------------------ */
+/* ------------------ Hover Card ------------------ */
 
-function FlipCard({ pillar, index }) {
-  const [isFlipped, setIsFlipped] = useState(false);
+function HoverCard({ pillar, index }) {
+  const [isHovered, setIsHovered] = useState(false);
   const Icon = pillar.icon;
 
   return (
@@ -125,45 +125,38 @@ function FlipCard({ pillar, index }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ delay: index * 0.05 }}
-      className="perspective-1000"
-      onMouseEnter={() => setIsFlipped(true)}
-      onMouseLeave={() => setIsFlipped(false)}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
     >
-      <motion.div
-        animate={{ rotateY: isFlipped ? 180 : 0 }}
-        transition={{ duration: 0.6, type: "spring", stiffness: 80 }}
-        className="rounded-3xl h-80 md:h-90 relative text-white flex flex-col justify-between bg-blue"
-        style={{ transformStyle: "preserve-3d" }}
-      >
+      <div className="rounded-3xl h-80 md:h-90 relative text-white bg-blue overflow-hidden">
         {/* Front */}
         <div
-          className="flex absolute inset-0 p-6  flex-col justify-between h-full  gap-4"
-          style={{ backfaceVisibility: "hidden" }}
+          className={`absolute inset-0 p-6 flex flex-col justify-between transition-opacity duration-300 ${
+            isHovered ? "opacity-0" : "opacity-100"
+          }`}
         >
           <h3 className="text-3xl font-semibold">{pillar.title}</h3>
           <div className="flex justify-end">
-            <Icon className="text-7xl " />
+            <Icon className="text-7xl" />
           </div>
         </div>
 
         {/* Back */}
         <div
-          className="flex absolute inset-0 p-6  flex-col justify-between h-full  gap-4"
-          style={{
-            backfaceVisibility: "hidden",
-            transform: "rotateY(180deg)",
-          }}
+          className={`absolute inset-0 p-6 flex flex-col justify-between transition-opacity duration-300 ${
+            isHovered ? "opacity-100" : "opacity-0"
+          }`}
         >
-          <ul className="space-y-2 list-disc pl-4 ">
+          <ul className="space-y-2 list-disc pl-4 overflow-y-auto max-h-full">
             {pillar.items.map((item, i) => (
               <li key={i}>{item}</li>
             ))}
           </ul>
           <div className="flex justify-end">
-            <Icon className="text-7xl " />
+            <Icon className="text-7xl" />
           </div>
         </div>
-      </motion.div>
+      </div>
     </motion.div>
   );
 }

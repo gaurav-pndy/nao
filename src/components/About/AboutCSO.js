@@ -18,7 +18,7 @@ export default function AboutCSO() {
 
       {/* Content */}
       <div className="relative z-10 max-w-6xl mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl text-center font-bold text-orange">
+        <h2 className="text-3xl md:text-4xl text-left font-bold text-orange">
           About Centre for Scientific Outreach (CSO)
         </h2>
         <motion.div
@@ -51,11 +51,11 @@ export default function AboutCSO() {
           </p>
 
           {/* Motto */}
-          <p className="mt-6 italic text-center">
+          <p className="mt-6 italic text-left">
             सा विद्या या विमुक्तये  — That is knowledge which liberates.
           </p>
           {/* CTA */}
-          <div className="mt-4 text-center">
+          <div className="mt-4 text-left">
             <a
               href="https://www.thecso.in"
               target="_blank"

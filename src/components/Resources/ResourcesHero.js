@@ -27,7 +27,7 @@ export default function ResourcesHero() {
             </h1>
 
             {/* CTA BUTTONS */}
-            <motion.p className="mt-4 text-white text-lg md:text-xl font-semibold max-w-2xl">
+            <motion.p className="mt-4 text-white text-lg md:text-xl font-semibold max-w-sm">
               Everything you need to prepare for the National Aviation Olympiad
             </motion.p>
             <motion.div
@@ -46,7 +46,7 @@ export default function ResourcesHero() {
               </a>
 
               <a
-                href="/docs/NAO_Syllabus.pdf"
+                href="/docs/NAO_2026_Olympiad_Syllabus.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-red w-full md:w-fit hover:bg-[#b92520] text-white font-medium px-6 py-2.5 rounded-lg transition-colors inline-block text-center"

@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function ImportantDates() {
   const dates = [
-    { event: "School Registration Opens", date: "17 October 2025" },
+    { event: "School Registration Opens", date: "17 October 2026" },
     { event: "Mock Tests Available", date: "From 15 April 2026" },
     { event: "Student Registration Deadline", date: "31 July 2026" },
     { event: "Phase 1 — North Zone", date: "19 August 2026" },
@@ -58,7 +58,7 @@ export default function ImportantDates() {
           ].map((row, ridx) => (
             <div
               key={ridx}
-              className={`${ridx === 1 ? "grid grid-cols-5 justify-center gap-6 pt-8" : "flex justify-center flex-wrap gap-6"}`}
+              className={`${ridx === 1 ? "grid grid-cols-5 justify-center gap-6 pt-8" : "flex justify-center flex-wrap gap-6 pt-8"}`}
             >
               {row.map((item, idx) => {
                 const [firstLine, secondLine] = item.date.split(/ (\d{4})$/).filter(Boolean);

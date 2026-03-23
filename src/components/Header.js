@@ -62,7 +62,7 @@ export default function Header() {
   }, []);
 
   return (
-    <header className="w-full  fixed top-0 z-50">
+    <header className="w-full  fixed top-0 z-50 overflow-hidden">
       {/* Top Gradient Bar */}
       <motion.div
         initial={{ y: -16, opacity: 0 }}
@@ -73,6 +73,7 @@ export default function Header() {
           backgroundImage: "url('/header/Top_Strip.svg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
         }}
       >
         <div className="max-w-6xl w-full mx-auto px-4 flex justify-between items-center">
@@ -119,7 +120,7 @@ export default function Header() {
         transition={{ delay: 0.2, duration: 0.6 }}
         className={`transition-all duration-300 ${
           isScrolled ? "bg-white shadow-md backdrop-blur-sm" : "bg-transparent"
-        }`}
+        } border-none`}
       >
         <div className="max-w-6xl mx-auto px-4 py-2 lg:py-4 flex items-center justify-between">
           {/* Logo */}
@@ -145,13 +146,13 @@ export default function Header() {
             </div>
 
             {/* 2026 badge */}
-            <span
+            {/* <span
               className={`text-xs lg:text-xs leading-3 md:leading-2.5 font-semibold transition-colors ${
                 isScrolled || isHome ? "" : "text-white"
               } ${isHome ? "leading-3 md:leading-2.5" : "leading-3.5"} `}
             >
               2026
-            </span>
+            </span> */}
           </motion.div>
 
           {/* Desktop Navigation */}
@@ -167,10 +168,10 @@ export default function Header() {
                   href={item.href}
                   className={`transition-colors duration-300 ${
                     pathname === item.href
-                      ? "font-semibold text-red"
+                      ? `font-bold ${isScrolled ? "text-black" : "text-white"}`
                       : isScrolled || isHome
-                        ? "text-[#2d333a] hover:text-red"
-                        : "text-white hover:text-yellow"
+                        ? "hover:text-yellow text-black"
+                        : "hover:text-yellow text-white"
                   }`}
                 >
                   {item.label}
@@ -234,8 +235,8 @@ export default function Header() {
                       onClick={() => setMenuOpen(false)}
                       className={`text-lg transition-colors ${
                         pathname === item.href
-                          ? "font-semibold text-red"
-                          : "text-[#2d333a] hover:text-red"
+                          ? "font-semibold text-white font-bold"
+                          : "text-[#2d333a] hover:text-white"
                       }`}
                     >
                       {item.label}

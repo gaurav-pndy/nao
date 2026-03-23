@@ -57,7 +57,7 @@ export default function ExpertEligibility() {
         >
           <motion.a
             whileHover={{ scale: 1.05 }}
-            href="/path/to/expert-eligibility.pdf"
+            href="/docs/NAO_2026_Registration_Eligibility.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-yellow px-6 py-2 rounded-lg font-semibold text-black hover:bg-[#e6c400] transition-colors w-full sm:w-1/3 text-center"

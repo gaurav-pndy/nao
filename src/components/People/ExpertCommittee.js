@@ -98,7 +98,7 @@ export default function ExpertCommittee() {
           <h2 className="text-3xl md:text-4xl font-bold text-orange">
             NAO Expert Committee
           </h2>
-          <div className="mt-4 bg-gray-100 p-6 rounded-lg max-w-3xl mx-auto text-center space-y-4">
+          <div className="mt-4 bg-gray-100 p-6 rounded-lg mx-auto text-center space-y-4">
             <p className="text-gray-700 leading-relaxed">
               A 100+ member Expert Committee ensuring world-class academic and
               professional credibility. Leading academicians from IITs, NITs,
@@ -116,7 +116,7 @@ export default function ExpertCommittee() {
         </motion.div>
 
         {/* domain tabs */}
-        <div className="flex flex-wrap justify-center gap-3 mb-8">
+        <div className="flex flex-wrap justify-start gap-3 mb-8 max-w-[50%] ">
           {domains.map((d) => (
             <button
               key={d}

@@ -160,8 +160,8 @@ export default function StudentBenefits() {
                 transition={{ duration: 0.3 }}
                 className="overflow-hidden w-full mt-2 text-xs text-left"
               >
-                  <p className="mt-1">{b.desc}</p>
-                  <p className="mt-1 italic text-[10px] font-bold">
+                  <p className="mt-1 text-center">{b.desc}</p>
+                  <p className="mt-1 italic text-[10px] font-bold text-center">
                     <span className="inline-block bg-white bg-opacity-80 px-1 rounded text-blue-800">
                       {b.level}
                     </span>

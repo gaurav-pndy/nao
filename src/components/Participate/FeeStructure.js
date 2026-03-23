@@ -145,7 +145,7 @@ export default function FeeStructure() {
 
           {/* Note */}
           <p className="mt-4 text-sm text-green-700 font-semibold align-middle text-center">
-            Note: 20% Discount on Registration rates are provided for Female
+            Note: <span className="font-extrabold">20% Discount</span> on Registration rates are provided for Female
             Candidates to encourage diversity.
           </p>
         </motion.div>

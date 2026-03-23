@@ -89,7 +89,7 @@ export default function Categories() {
               </div>
 
               {/* List */}
-              <ul className="px-4 py-2 font-medium ">
+              <ul className="px-4 py-2 font-medium text-left">
                 {cat.items.map((item) => (
                   <li
                     key={item.name}

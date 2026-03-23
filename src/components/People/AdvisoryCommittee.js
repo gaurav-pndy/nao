@@ -83,10 +83,12 @@ export default function AdvisoryCommittee() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="bg-white rounded-lg p-6 shadow-sm text-center flex flex-col items-center hover:shadow-lg transition-shadow duration-300"
+              className="bg-white rounded-xl p-6 border border-gray-200 text-center flex flex-col items-center shadow-md hover:shadow-lg transition-all duration-300"
             >
               {/* photo placeholder */}
-              <div className="h-20 w-20 bg-gray-200 rounded-full mx-auto mb-4" />
+              <div className="h-28 w-28 rounded-full mx-auto mb-4 p-[3px] bg-gradient-to-tr from-orange-400 to-yellow-400">
+                <div className="h-full w-full bg-gray-200 rounded-full border-2 border-white" />
+              </div>
               <h3 className="font-semibold text-lg">
                 {m.salutation} {m.name}
               </h3>

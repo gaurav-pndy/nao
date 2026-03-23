@@ -59,7 +59,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`antialiased bg-white ${inter.variable} text-[#2d333a]`}>
         <Header />
-        <main className="mt-8 md:mt-12">{children}</main>
+        <main>{children}</main>
         <ConnectWithUs />
         <Footer />
       </body>

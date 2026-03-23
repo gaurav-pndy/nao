@@ -66,8 +66,11 @@ export default function NAOCommittee() {
           <h2 className="text-3xl md:text-4xl text-center font-bold text-orange">
             Guided by 100+ Aviation Experts
           </h2>
-          <p className="mt-4 font-medium md:text-lg ">
-            NAO’s curriculum, examinations, and evaluation are overseen by a structured Expert Committee ensuring academic rigor, industry relevance, and policy alignment consistent with ICAO’s NGAP initiative.
+          <p className="mt-4 font-medium md:text-lg">
+            NAO’s curriculum, examinations, and evaluation are overseen by a
+            structured Expert Committee ensuring academic rigor, industry
+            relevance, and policy alignment consistent with ICAO’s NGAP
+            initiative.
           </p>
         </motion.div>
 
@@ -77,6 +80,7 @@ export default function NAOCommittee() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
+          className="relative px-8" // Add horizontal padding to give room for navigation arrows
         >
           <Swiper
             modules={[Navigation]}
@@ -89,10 +93,11 @@ export default function NAOCommittee() {
               1280: { slidesPerView: 4 },
             }}
             className="nao-committee-swiper"
+            style={{ overflow: "visible" }}
           >
             {committeeMembers.map((member) => (
               <SwiperSlide key={member.name}>
-                <div className="bg-white rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-300">
+                <div className="bg-white rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-300 border border-gray-200">
                   {/* Image */}
                   <div className="h-64 w-full overflow-hidden rounded-t-2xl">
                     <img
@@ -104,12 +109,12 @@ export default function NAOCommittee() {
 
                   {/* Content */}
                   <div className="p-5 text-center">
-                    <h3 className="text-xl font-semibold ">{member.name}</h3>
-                    <p className=" font-medium text-[#2d333a]">
+                    <h3 className="text-xl font-semibold">{member.name}</h3>
+                    <p className="font-medium text-[#2d333a]">
                       {member.designation}
                     </p>
-                    <p className=" text-gray-600">{member.organization}</p>
-                    <p className=" text-gray-500">{member.city}</p>
+                    <p className="text-gray-600">{member.organization}</p>
+                    <p className="text-gray-500">{member.city}</p>
                   </div>
                 </div>
               </SwiperSlide>
@@ -126,14 +131,14 @@ export default function NAOCommittee() {
         >
           <Link
             href="/people"
-            className="bg-yellow cursor-pointer  w-full md:w-fit hover:bg-[#e6c400] text-black font-medium px-6 py-2.5 rounded-lg transition-colors"
+            className="bg-yellow cursor-pointer w-full md:w-fit hover:bg-[#e6c400] text-black font-medium px-6 py-2.5 rounded-lg transition-colors"
           >
             Meet Our Experts
           </Link>
 
           <Link
             href="/people#eligibility"
-            className="bg-red  cursor-pointer w-full md:w-fit hover:bg-[#b92520] text-white font-medium px-6 py-2.5 rounded-lg transition-colors"
+            className="bg-red cursor-pointer w-full md:w-fit hover:bg-[#b92520] text-white font-medium px-6 py-2.5 rounded-lg transition-colors"
           >
             Nominate Expert
           </Link>

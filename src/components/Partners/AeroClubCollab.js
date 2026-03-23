@@ -171,7 +171,7 @@ export default function AeroClubCollab() {
           viewport={{ once: true }}
         >
           <motion.a
-            href="/partners/NAO_2026_Brochure.pdf"
+            href="/partners/NAO_2026_Aviation_Outreach_Collaboration_Proposal.pdf"
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ scale: 1.03 }}

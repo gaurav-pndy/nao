@@ -53,7 +53,7 @@ export default function GetInvolved() {
                 <a
                   href="https://forms.zohopublic.com/example/nominateExpert"
                   target="_blank"
-                  className="inline-block bg-green hover:bg-green-700 text-white font-medium px-6 py-2.5 rounded-lg text-center transition-colors"
+                  className="inline-block bg-green bg-green-700 text-white font-medium px-6 py-2.5 rounded-lg text-center transition-colors"
                 >
                   Nominate an Expert
                 </a>

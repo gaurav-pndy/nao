@@ -54,11 +54,11 @@ const cards = [
   },
   {
     title: "Individual Students",
-    image: "/participate/school.png", 
+    image: "/participate/school.png", // fallback image
     bg: "bg-[#0061e5]",
     text: "text-white",
     button: "Register as Individual",
-    href: "", 
+    href: "",
     steps: [
       {
         title: "Eligibility",
@@ -76,11 +76,11 @@ const cards = [
   },
   {
     title: "Volunteers & Coordinators",
-    image: "/participate/expert.png", 
+    image: "/participate/expert.png",
     bg: "bg-green-500",
     text: "text-white",
     button: "Register as Volunteer",
-    href: "", 
+    href: "",
     steps: [
       {
         title: "Expression of Interest",
@@ -122,38 +122,42 @@ export default function HowToRegister() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className={`${card.bg} ${card.text} rounded-4xl px-4 py-8 flex flex-col justify-between h-full`}
+              className={`${card.bg} ${card.text} rounded-4xl px-4 py-8 flex flex-col h-full`}
             >
-              {/* Header */}
-              <div className="text-center mb-6 flex flex-col items-center justify-center h-40">
-                <h3 className="text-2xl font-semibold leading-tight">
+              {/* Header - fixed height to keep images aligned */}
+              <div className="flex flex-col items-center mb-4">
+                <h3 className="text-2xl font-semibold leading-tight text-center min-h-[60px] flex items-center justify-center">
                   {card.title}
                 </h3>
-                <img
-                  src={card.image}
-                  alt={card.title}
-                  className="h-20 w-auto mt-3" 
-                  onError={(e)=>{e.target.src='/participate/school.png';}} 
-                />
+
+                <div className="h-24 flex items-end justify-center mt-2">
+                  <img
+                    src={card.image}
+                    alt={card.title}
+                    className="h-full w-auto object-contain"
+                    onError={(e) => {
+                      e.currentTarget.src = "/participate/school.png";
+                    }}
+                  />
+                </div>
               </div>
 
-              {/* Steps */}
-              <div className="space-y-5 flex-1">
+              {/* Steps - will expand to fill available space */}
+              <div className="flex-1 space-y-5">
                 {card.steps.map((step, i) => (
                   <div key={i} className="flex gap-4">
                     <div className="w-8 h-8 rounded-full bg-[#dbe5f2] text-blue text-lg flex items-center justify-center font-semibold shrink-0 mt-1">
                       {i + 1}
                     </div>
-
                     <div>
-                      <p className="font-semibold ">{step.title}</p>
-                      <p className=" opacity-90 text-sm">{step.desc}</p>
+                      <p className="font-semibold">{step.title}</p>
+                      <p className="opacity-90 text-sm">{step.desc}</p>
                     </div>
                   </div>
                 ))}
               </div>
 
-              {/* CTA */}
+              {/* CTA - always at bottom */}
               <Link
                 href={card.href}
                 target="_blank"

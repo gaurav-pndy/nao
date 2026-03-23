@@ -61,9 +61,8 @@ export default function SupportSection() {
                 {" "}
                 <FiMapPin className=" text-4xl" />
               </div>
-              <p className="text-lg leading-tight">
-                Hours: Mon–Sat, 10 AM – 6 PM IST
-              </p>
+              <p className="text-lg">Hours: Mon–Sat</p>
+              <p className="text-lg mt-2">10 AM – 6 PM IST</p>
             </div>
           </div>
         </motion.div>

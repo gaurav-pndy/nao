@@ -71,22 +71,23 @@ export default function FAQSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.08 }}
-              className="rounded-xl overflow-hidden group transition-colors cursor-pointer h-full flex flex-col"
+              className="rounded-xl overflow-hidden group cursor-pointer h-full flex flex-col transition-all duration-500 hover:-translate-y-1 hover:shadow-lg"
             >
               <h3
                 className={`font-semibold p-6 text-2xl md:text-3xl rounded-t-xl
-                  ${faq.highlighted ? "bg-[#303030] text-white" : "bg-[#f7f7f7] "}
-                  group-hover:bg-[#303030] group-hover:text-white
-                `}
+    transition-colors duration-500 ease-in-out
+    ${faq.highlighted ? "bg-[#303030] text-white" : "bg-[#f7f7f7]"}
+    group-hover:bg-[#303030] group-hover:text-white
+  `}
               >
                 {faq.question}
               </h3>
-
               <p
                 className={`p-6 text-lg leading-tight rounded-b-xl flex-1
-                  ${faq.highlighted ? "bg-orange text-white" : "bg-[#fefefe] "}
-                  group-hover:bg-orange group-hover:text-white
-                `}
+    transition-colors duration-500 ease-in-out
+    ${faq.highlighted ? "bg-orange text-white" : "bg-[#fefefe]"}
+    group-hover:bg-orange group-hover:text-white
+  `}
               >
                 {faq.answer}
               </p>
