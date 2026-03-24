@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { nasalization } from "@/fonts/nasalization";
+import Link from "next/link";
 
 export default function ParticipateHero() {
   return (
@@ -40,21 +41,19 @@ export default function ParticipateHero() {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3 }}
             >
-              <a
-                href=""
-                target="_blank"
+              <Link
+                href="/school-registration"
                 className="bg-yellow w-full md:w-fit hover:bg-[#e6c400] text-black font-medium px-6 py-2.5 rounded-lg transition-colors text-center"
               >
                 Register Your School
-              </a>
+              </Link>
 
-              <a
-                href=""
-                target="_blank"
+              <Link
+                href="/expert-registration"
                 className="bg-red w-full md:w-fit hover:bg-[#b92520] text-white font-medium px-6 py-2.5 rounded-lg transition-colors text-center"
               >
                 Register as an Expert
-              </a>
+              </Link>
             </motion.div>
           </motion.div>
         </div>

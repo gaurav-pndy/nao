@@ -10,44 +10,281 @@ import "swiper/css/navigation";
 
 const committeeMembers = [
   {
-    name: "Dr. Arun Sharma",
-    designation: "Former Director",
-    organization: "Civil Aviation Authority",
-    city: "New Delhi",
-    image:
-      "https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?w=800&q=80",
+    name: "Prof. Gopal M. Kamath",
+    designation: "Head, Department of Aerospace Engineering",
+    organization: "IIT Kanpur",
+    city: "Kanpur",
+    image: "/experts/KAMATH_Gopal_M.jpg",
   },
   {
-    name: "Capt. Rohan Mehta",
-    designation: "Chief Pilot",
-    organization: "National Airlines",
-    city: "Mumbai",
-    image:
-      "https://images.unsplash.com/photo-1599566150163-29194dcaad36?w=800&q=80",
+    name: "Wg. Cdr. Prem Kumar Garg (Retd.)",
+    designation: "Chief Executive Officer & Accountable Manager",
+    organization: "IndiaOne Air",
+    city: "Gandhinagar",
+    image: "/experts/Prem_Kumar_GARG.jpg",
   },
   {
-    name: "Ms. Ananya Iyer",
-    designation: "Aviation Policy Expert",
-    organization: "Aerospace Think Tank",
-    city: "Bengaluru",
-    image:
-      "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=800&q=80",
+    name: "Sameep Shastri",
+    designation: "Chairman",
+    organization:
+      "Indian Institute of Governance and Leadership & BRICS Chamber of Commerce & Industry",
+    city: "Delhi",
+    image: "/experts/Sameep.webp",
   },
   {
-    name: "Mr. Vikram Singh",
-    designation: "Head – Training",
-    organization: "MRO Solutions Pvt Ltd",
-    city: "Hyderabad",
-    image:
-      "https://images.unsplash.com/photo-1607746882042-944635dfe10e?w=800&q=80",
+    name: "Padma Shri Dr. H. C. Verma",
+    designation: "Former Professor",
+    organization: "Department of Physics, IIT Kanpur",
+    city: "Kanpur",
+    image: "/experts/hc-verma-bw.jpg",
   },
   {
-    name: "Dr. Neelam Verma",
-    designation: "Aerospace Professor",
-    organization: "National Institute of Aviation",
+    name: "Padma Shri Anand Kumar",
+    designation: "Founder",
+    organization: "Super30",
+    city: "Delhi",
+    image: "/experts/akumae1727936742828.jpg",
+  },
+  {
+    name: "Dr. Sudhir Mishra",
+    designation: "Ex-Director",
+    organization: "Brahmos",
+    city: "Delhi",
+    image: "/experts/Sudhir.webp",
+  },
+  {
+    name: "Shri. Apj Saleem Sheikh",
+    designation: "Co-Founder",
+    organization: "Dr. APJ Abdul Kalam International Foundation",
     city: "Chennai",
-    image:
-      "https://images.unsplash.com/photo-1551836022-deb4988cc6c0?w=800&q=80",
+    image: "/experts/APJM.webp",
+  },
+  {
+    name: "Prof. R. K. Pant",
+    designation: "HoD",
+    organization: "IIT Bombay",
+    city: "Mumbai",
+    image: "/experts/pant.jpg",
+  },
+  {
+    name: "Dr. Rakesh Singh",
+    designation: "Scientist",
+    organization: "Defence Research and Development Organization (DRDO)",
+    city: "Delhi",
+    image: "/experts/Rakesh Kumar.jpg",
+  },
+  {
+    name: "Shri. Vivek Kulkarni",
+    designation: "Secretary",
+    organization: "AeSI Mumbai",
+    city: "Mumbai",
+    image: "/experts/Vivek Kulkarni.jpg",
+  },
+  {
+    name: "Lt. Gen. Ajay Kumar Suri",
+    designation: "AVSM, Former Director General & Colonel Commandant",
+    organization: "Army Aviation",
+    city: "Delhi",
+    image: "/experts/Ajay kumar.webp",
+  },
+  {
+    name: "Dr. Arvind Dixit",
+    designation: "Former Scientist",
+    organization: "Defence Research and Development Organization (DRDO)",
+    city: "Gurgaon",
+    image: "/experts/Dixit.jpg",
+  },
+  {
+    name: "Dr. Murzban Karai",
+    designation: "Nuclear Scientist, CEO",
+    organization: "Jenrashid Consultants",
+    city: "Mumbai",
+    image: "/experts/Picture2.jpg",
+  },
+  {
+    name: "Capt. Ravinder Sehrawat",
+    designation: "Director",
+    organization: "Institute for Aviators",
+    city: "Delhi",
+    image: "/experts/Ravinder.webp",
+  },
+  {
+    name: "Shri. R. Rajaram",
+    designation: "Director",
+    organization: "Sri Eshwar College of Engineering",
+    city: "Coimbatore",
+    image: "/experts/rajaram.webp",
+  },
+  {
+    name: "Shri. Rajendra Mane",
+    designation: "Director",
+    organization: "Aircraft Maintenance Engineering, Interglobe Education",
+    city: "Delhi",
+    image: "/experts/R.Mane.jpg",
+  },
+  {
+    name: "Shri. Aman Johri",
+    designation: "CEO",
+    organization: "Jatayu Unmanned Systems",
+    city: "Mumbai",
+    image: "/experts/Aman.jpg",
+  },
+  {
+    name: "Shri. B. C. Behera",
+    designation: "Former Deputy Director General",
+    organization: "Directorate General of Civil Aviation (DGCA)",
+    city: "Bengaluru",
+    image: "/experts/bcbehera.webp",
+  },
+  {
+    name: "Shri. S. Sathiyamani",
+    designation: "Former Senior Technical Director, Scientist",
+    organization: "National Informatics Centre (NIC)",
+    city: "Delhi",
+    image: "/experts/ssrini.jpg",
+  },
+  {
+    name: "Shri. Sandeep Bahl",
+    designation: "Director",
+    organization: "US India Aviation Cooperation Program",
+    city: "Delhi",
+    image: "/experts/bahl.jpg",
+  },
+  {
+    name: "Shri. Anirrban Bhattacharya",
+    designation: "Director",
+    organization: "Vector Technorum",
+    city: "New Delhi",
+    image: "/experts/Anirrban.jpg",
+  },
+  {
+    name: "Col. K. V. Kuber (Retd.)",
+    designation: "Director",
+    organization: "Aerospace, Ernst & Young LLP (EY)",
+    city: "New Delhi",
+    image: "/experts/kv.jpg",
+  },
+  {
+    name: "Prof. (Dr.) G. S. Bajpai",
+    designation: "Vice Chancellor",
+    organization: "National Law University Delhi",
+    city: "Delhi",
+    image: "/experts/gsb.webp",
+  },
+  {
+    name: "Shri. Gabe Gabriel",
+    designation: "Former Engineer",
+    organization: "NASA",
+    city: "Florida",
+    image: "/experts/Gabe.webp",
+  },
+  {
+    name: "Shri. Armel Jezequel",
+    designation: "Chief Executive Officer",
+    organization: "Aircraft Academy, France",
+    city: "Mauguio",
+    image: "/experts/Armel.jpg",
+  },
+  {
+    name: "Shri. Rajender Singh Lahauria",
+    designation: "Former Director & Consultant",
+    organization: "Indian Aviation Academy, DGCA",
+    city: "New Delhi",
+    image: "/experts/RSL.webp",
+  },
+  {
+    name: "Shri. Ashwani Sharma",
+    designation: "Chairperson",
+    organization: "Aeronautical Society of India (Mumbai Chapter)",
+    city: "Mumbai",
+    image: "/experts/ashwani.jpg",
+  },
+  {
+    name: "Shri. Kandiah K Padmanthan",
+    designation: "Managing Director",
+    organization: "Subang MRO, Malaysia",
+    city: "Subang",
+    image: "/experts/K.K. Padmanathan.png",
+  },
+  {
+    name: "Dr. P. V. Venkitakrishnan",
+    designation: "Distinguished Scientist",
+    organization: "Indian Space Research Organization (ISRO)",
+    city: "Bengaluru",
+    image: "/experts/v.krishnan.jpg",
+  },
+  {
+    name: "Air Marshal Sukchain Singh (Retd.)",
+    designation: "Former Air Officer-in-Charge Maintenance",
+    organization: "Indian Air Force",
+    city: "Delhi",
+    image: "/experts/sukhchain.jpg",
+  },
+  {
+    name: "Prof. M. S. Prasad",
+    designation: "Director",
+    organization:
+      "Amity Institute of Space Science & Technology, Amity University",
+    city: "Noida",
+    image: "/experts/1790_MSPrasad.jpg",
+  },
+  {
+    name: "Capt. Sudarshan Pandey",
+    designation: "Managing Partner",
+    organization: "International Flight Operations Academy, India",
+    city: "Greater Delhi",
+    image: "/experts/s.pandey.jpg",
+  },
+  {
+    name: "Wg. Cdr. M Jeyakumar (Retd.)",
+    designation: "Founder",
+    organization:
+      "nRoot Group & BRIDGE Bharat Council for Promotion of Innovation Research & Entrepreneurship",
+    city: "Thanjavur",
+    image: "/experts/jeyakumar.webp",
+  },
+  {
+    name: "Dr. Vijayaraja K",
+    designation:
+      "Professor & Head, Department of Aeronautical and Aerospace Engineering",
+    organization: "KCG College of Technology",
+    city: "Chennai",
+    image: "/experts/vijayaraja.jpg",
+  },
+  {
+    name: "Capt. Poonam Devrakhyani",
+    designation: "Flight Operations Inspector",
+    organization: "DGCA India",
+    city: "Chennai",
+    image: "/experts/poonam.jpg",
+  },
+  {
+    name: "Wg. Cdr. Rachit Bhatnagar (Retd.)",
+    designation: "Aerospace & MRO Specialist, Head Business Operations",
+    organization: "Farata Technologies Pvt. Ltd",
+    city: "Chandigarh",
+    image: "/experts/Rachit.jpg",
+  },
+  {
+    name: "Capt. Vaibhav Goutham Suresh",
+    designation: "Director",
+    organization: "Galgotias University - SALTM",
+    city: "Noida",
+    image: "/experts/Goutham Suresh.jpg",
+  },
+  {
+    name: "Shri. Linus Benjamin Bauer",
+    designation: "Founder & Global Managing Partner",
+    organization: "BAA & Partners",
+    city: "Dubai",
+    image: "/experts/Linus Benjamin.jpg",
+  },
+  {
+    name: "Shri. Vippan Raj Dutt",
+    designation: "Professor of Practice - Aviation Management",
+    organization: "UPES",
+    city: "Gurugram",
+    image: "/experts/Raj Dutt.jpg",
   },
 ];
 
@@ -63,9 +300,10 @@ export default function NAOCommittee() {
           transition={{ duration: 0.5 }}
           className="text-center mb-8"
         >
-          <h2 className="text-3xl md:text-4xl text-center font-bold text-orange">
+          <h2 className="text-3xl md:text-4xl font-bold text-orange">
             Guided by 100+ Aviation Experts
           </h2>
+
           <p className="mt-4 font-medium md:text-lg">
             NAO’s curriculum, examinations, and evaluation are overseen by a
             structured Expert Committee ensuring academic rigor, industry
@@ -80,7 +318,7 @@ export default function NAOCommittee() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="relative px-8" // Add horizontal padding to give room for navigation arrows
+          className="relative px-6 md:px-10"
         >
           <Swiper
             modules={[Navigation]}
@@ -93,28 +331,41 @@ export default function NAOCommittee() {
               1280: { slidesPerView: 4 },
             }}
             className="nao-committee-swiper"
-            style={{ overflow: "visible" }}
           >
             {committeeMembers.map((member) => (
-              <SwiperSlide key={member.name}>
-                <div className="bg-white rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-300 border border-gray-200">
+              <SwiperSlide key={member.name} className="h-full">
+                {/* Card */}
+                <div className="bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-lg transition-all duration-300 h-full flex flex-col">
                   {/* Image */}
-                  <div className="h-64 w-full overflow-hidden rounded-t-2xl">
+                  <div className="w-full h-56 sm:h-60 md:h-64 overflow-hidden rounded-t-2xl">
                     <img
                       src={member.image}
                       alt={member.name}
-                      className="h-full w-full object-cover"
+                      className="w-full h-full object-cover"
                     />
                   </div>
 
                   {/* Content */}
-                  <div className="p-5 text-center">
-                    <h3 className="text-xl font-semibold">{member.name}</h3>
-                    <p className="font-medium text-[#2d333a]">
+                  <div className="p-5 text-center flex flex-col flex-1">
+                    {/* Name */}
+                    <h3 className="text-lg md:text-xl font-semibold leading-tight min-h-[48px]">
+                      {member.name}
+                    </h3>
+
+                    {/* Designation */}
+                    <p className="font-medium text-[#2d333a] mt-1 text-sm md:text-base min-h-[48px]">
                       {member.designation}
                     </p>
-                    <p className="text-gray-600">{member.organization}</p>
-                    <p className="text-gray-500">{member.city}</p>
+
+                    {/* Organization */}
+                    <p className="text-gray-700 font-semibold text-sm mt-1 min-h-[40px]">
+                      {member.organization}
+                    </p>
+
+                    {/* City (always bottom aligned) */}
+                    <p className="text-gray-500 text-sm mt-auto">
+                      {member.city}
+                    </p>
                   </div>
                 </div>
               </SwiperSlide>

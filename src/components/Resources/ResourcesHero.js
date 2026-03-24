@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { nasalization } from "@/fonts/nasalization";
+import Link from "next/link";
 
 export default function ResourcesHero() {
   return (
@@ -36,14 +37,13 @@ export default function ResourcesHero() {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3 }}
             >
-              <a
-                href="https://forms.zohopublic.com/example/schoolregistration"
-                target="_blank"
+              <Link
+                href="/school-registration"
                 rel="noopener noreferrer"
                 className="bg-yellow w-full md:w-fit hover:bg-[#e6c400] text-black font-medium px-6 py-2.5 rounded-lg transition-colors inline-block text-center"
               >
                 Register Your School
-              </a>
+              </Link>
 
               <a
                 href="/docs/NAO_2026_Olympiad_Syllabus.pdf"

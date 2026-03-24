@@ -66,8 +66,7 @@ export default function ExpertEligibility() {
           </motion.a>
           <motion.a
             whileHover={{ scale: 1.05 }}
-            href="https://zfrmz.in/aaJiXotostGRiyitai9U"
-            target="_blank"
+            href="/expert-registration"
             rel="noopener noreferrer"
             className="bg-orange px-6 py-2 rounded-lg font-semibold text-white hover:bg-orange-600 transition-colors w-full sm:w-1/3 text-center"
           >

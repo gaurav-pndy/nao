@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function CTAStrip() {
   return (
@@ -15,20 +16,19 @@ export default function CTAStrip() {
           Be part of India’s aviation education revolution.
         </p>
         <div className="flex flex-col md:flex-row gap-4">
-          <a
-            href="/participate"
+          <Link
+            href="/school-registration"
             className="bg-white text-orange-700 font-semibold px-6 py-2 rounded-full hover:bg-gray-100 hover:scale-105 transform transition-all duration-200 text-center w-full md:w-auto"
           >
             Register Your School
-          </a>
-          <a
-            href="https://zfrmz.in/aaJiXotostGRiyitai9U"
-            target="_blank"
+          </Link>
+          <Link
+            href="/expert-registration"
             rel="noopener noreferrer"
             className="bg-white text-orange-700 font-semibold px-6 py-2 rounded-full hover:bg-gray-100 hover:scale-105 transform transition-all duration-200 text-center w-full md:w-auto"
           >
             Join as Expert
-          </a>
+          </Link>
           <a
             href="/partners"
             className="bg-white text-orange-700 font-semibold px-6 py-2 rounded-full hover:bg-gray-100 hover:scale-105 transform transition-all duration-200 text-center w-full md:w-auto"

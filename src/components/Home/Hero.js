@@ -45,7 +45,7 @@ export default function Hero() {
               transition={{ delay: 0.3 }}
             >
               <Link
-                href={"/participate"}
+                href="/school-registration"
                 className="bg-yellow w-full md:w-fit hover:bg-[#e6c400] text-black font-medium px-6 py-2.5 rounded-lg transition-colors"
               >
                 Register Your School

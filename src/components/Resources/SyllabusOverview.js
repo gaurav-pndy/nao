@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function SyllabusOverview() {
   return (
@@ -97,14 +98,14 @@ export default function SyllabusOverview() {
         </div>
 
         <div className="text-center">
-          <a
-            href="/docs/NAO_Detailed_Syllabus.pdf"
+          <Link
+            href="/docs/NAO_2026_Olympiad_Syllabus.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-blue text-white font-semibold px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
           >
             Download Detailed Syllabus
-          </a>
+          </Link>
         </div>
       </div>
     </section>

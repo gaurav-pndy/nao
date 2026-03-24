@@ -18,12 +18,12 @@ const quickLinks = [
 ];
 
 const resources = [
-  { label: "Study Materials", href: "#" },
-  { label: "Question Banks", href: "#" },
-  { label: "Video Tutorials", href: "#" },
-  { label: "Practice Tests", href: "#" },
-  { label: "Syllabus", href: "#" },
-  { label: "FAQs", href: "#" },
+  { label: "Study Materials", href: "/resources/#downloadable-resources" },
+  { label: "Question Banks", href: "/resources/#downloadable-resources" },
+  { label: "Video Tutorials", href: "/resources/#downloadable-resources" },
+  { label: "Practice Tests", href: "/resources/#downloadable-resources" },
+  { label: "Syllabus", href:"/resources/#downloadable-resources" },
+  { label: "FAQs", href: "/resources/#downloadable-resources" },
 ];
 
 const socialIcons = [

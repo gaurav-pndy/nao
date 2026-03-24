@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { nasalization } from "@/fonts/nasalization";
+import Link from "next/link";
 
 export default function AboutHero() {
   return (
@@ -37,13 +38,17 @@ export default function AboutHero() {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3 }}
             >
-              <button className="bg-yellow cursor-pointer w-full md:w-fit hover:bg-[#e6c400] text-black font-medium px-6 py-2.5 rounded-lg transition-colors">
+              <Link 
+              href="/student-registration"
+              className="bg-yellow cursor-pointer w-full md:w-fit hover:bg-[#e6c400] text-black font-medium px-6 py-2.5 rounded-lg transition-colors">
                 Register as a Student
-              </button>
+              </Link>
 
-              <button className="bg-red cursor-pointer w-full md:w-fit hover:bg-[#b92520] text-white font-medium px-6 py-2.5 rounded-lg transition-colors">
+              <Link 
+              href="/school-registration"
+              className="bg-red cursor-pointer w-full md:w-fit hover:bg-[#b92520] text-white font-medium px-6 py-2.5 rounded-lg transition-colors">
                 Register as a School
-              </button>
+              </Link>
             </motion.div>
           </motion.div>
         </div>

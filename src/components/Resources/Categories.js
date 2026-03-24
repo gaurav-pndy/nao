@@ -19,8 +19,8 @@ const categories = [
     title: "For Students",
     color: "bg-[#63b34b]",
     items: [
-      { name: "Olympiad Syllabus", href: "#", size: "TBD" },
-      { name: "Examination Structure", href: "#", size: "TBD" },
+      { name: "Olympiad Syllabus", href: "/docs/NAO_2026_Olympiad_Syllabus.pdf", size: "TBD" },
+      { name: "Examination Structure", href: "/docs/NAO_2026_Examination_Structure.pdf", size: "TBD" },
       { name: "Practice Questions Bank", href: "#", size: "TBD" },
       { name: "Aviation Glossary", href: "#", size: "TBD" },
       { name: "Recommended Reading List", href: "#", size: "TBD" },
@@ -52,7 +52,7 @@ const categories = [
 
 export default function Categories() {
   return (
-    <section className="py-12">
+    <section id="downloadable-resources"  className="py-12">
       <div className="max-w-6xl mx-auto px-4 text-center">
         {/* Heading */}
         <motion.h2
