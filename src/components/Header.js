@@ -38,17 +38,15 @@ const socialIcons = [
   },
 ];
 
-const phoneNumbers = [
-  "+91 92112 29927",
-  "+91 97739 87836",
-  "+91 93463 70858",
-];
+const phoneNumbers = ["+91 92112 29927", "+91 97739 87836", "+91 93463 70858"];
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [currentPhoneIndex, setCurrentPhoneIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
+
+  const [showDonate, setShowDonate] = useState(false);
 
   const currentPhone = phoneNumbers[currentPhoneIndex];
 
@@ -111,6 +109,13 @@ export default function Header() {
               {currentPhone}
             </span>
             <span>| nao@thecso.in</span>
+
+            <button
+              onClick={() => setShowDonate(true)}
+              className="bg-linear-to-r cursor-pointer from-[#2da9b9] to-[#0366e2] text-white px-3 py-2 rounded-lg shadow-md hover:scale-105 transition-transform"
+            >
+              Donate Now
+            </button>
 
             <div className="flex gap-2">
               {socialIcons.map((icon, i) => (
@@ -300,6 +305,43 @@ export default function Header() {
           </>
         )}
       </AnimatePresence>
+
+      
+      <AnimatePresence>
+        {showDonate && (
+          <motion.div
+            className="fixed inset-0 bg-black/60 flex justify-center items-center z-9999 p-4 "
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+          >
+            <motion.div
+              className="bg-white overflow-hidden rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] md:max-h-188 h-full relative"
+              initial={{ scale: 0.8, opacity: 0, y: 20 }}
+              animate={{ scale: 1, opacity: 1, y: 0 }}
+              exit={{ scale: 0.9, opacity: 0, y: 20 }}
+              transition={{ duration: 0.4, ease: "easeOut" }}
+            >
+              <button
+                onClick={() => setShowDonate(false)}
+                className="absolute top-3 right-7 text-gray-600 hover:text-black text-3xl font-bold"
+              >
+                ×
+              </button>
+              <iframe
+                width="100%"
+                height="100%"
+                src="https://zohosecurepay.in/checkout/fq35wqxe-8t0it3x73g4s1/Donate-Now"
+                style={{ border: "none" }}
+                title="Donate Now"
+              ></iframe>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
     </header>
   );
 }
+
