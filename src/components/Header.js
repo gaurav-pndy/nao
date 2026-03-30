@@ -99,20 +99,20 @@ export default function Header() {
             1st Pan India Aviation Olympiad
           </span>
 
-           <span
-              onMouseEnter={() => setIsHovered(true)}
-              onMouseLeave={() => setIsHovered(false)}
-              className="ml-auto cursor-default"
-            >
-              {currentPhone}
-            </span>
+          <span
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+            className="ml-auto cursor-default"
+          >
+            {currentPhone}
+          </span>
 
           <div className="hidden md:flex items-center gap-4">
             <span className="ml-2"> | nao@thecso.in</span>
 
             <button
               onClick={() => setShowDonate(true)}
-              className="bg-linear-to-r cursor-pointer from-[#2da9b9] to-[#0366e2] text-white px-3 py-2 rounded-lg shadow-md hover:scale-105 transition-transform"
+              className="bg-linear-to-r cursor-pointer  from-[#1d9bf0] to-[#0b5ed7] text-white px-3 py-2 rounded-lg shadow-md hover:scale-105 transition-transform"
             >
               Donate Now
             </button>
@@ -208,15 +208,23 @@ export default function Header() {
             })}
           </nav>
 
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setMenuOpen(true)}
-            className={`md:hidden flex text-3xl flex-col gap-1 transition-colors ${
-              isScrolled || isHome ? "text-[#2d333a]" : "text-white"
-            }`}
-          >
-            <GiHamburgerMenu />
-          </button>
+          {/* Mobile: Donate Button + Menu Button */}
+          <div className="flex md:hidden items-center gap-3">
+            <button
+              onClick={() => setShowDonate(true)}
+              className="bg-linear-to-r cursor-pointer from-[#2da9b9] to-[#0366e2] text-white p-1 rounded-lg text-xs shadow-md hover:scale-105 transition-transform"
+            >
+              Donate Now
+            </button>
+            <button
+              onClick={() => setMenuOpen(true)}
+              className={`flex text-2xl flex-col gap-1 transition-colors ${
+                isScrolled || isHome ? "text-[#2d333a]" : "text-white"
+              }`}
+            >
+              <GiHamburgerMenu />
+            </button>
+          </div>
         </div>
       </motion.div>
 
@@ -263,7 +271,7 @@ export default function Header() {
                       onClick={() => setMenuOpen(false)}
                       className={`text-lg transition-colors ${
                         pathname === item.href
-                          ? "font-semibold text-white font-bold"
+                          ? "text-black font-bold"
                           : "text-[#2d333a] hover:text-white"
                       }`}
                     >
@@ -272,10 +280,24 @@ export default function Header() {
                   </motion.div>
                 ))}
               </nav>
-              <div className="h-px bg-black/10 mb-6" />
+              <div className="h-px bg-black/10" />
 
               {/* Contact Info (Mobile) */}
-              <div className="mt-6 text-[#2d333a] space-y-2">
+              <div className="mt-4 text-[#2d333a] space-y-2">
+                <span
+                  onMouseEnter={() => setIsHovered(true)}
+                  onMouseLeave={() => setIsHovered(false)}
+                  className="cursor-default"
+                >
+                  {currentPhone}
+                </span>
+                <br />
+                <button
+                  onClick={() => setShowDonate(true)}
+                  className="bg-linear-to-r cursor-pointer from-[#2da9b9] to-[#0366e2] text-white text-sm p-1 rounded-lg shadow-md hover:scale-105 transition-transform mt-3"
+                >
+                  Donate Now
+                </button>
                 <p>nao@thecso.in</p>
 
                 <div className="flex gap-3 pt-2">
@@ -305,7 +327,6 @@ export default function Header() {
         )}
       </AnimatePresence>
 
-      
       <AnimatePresence>
         {showDonate && (
           <motion.div
@@ -339,8 +360,6 @@ export default function Header() {
           </motion.div>
         )}
       </AnimatePresence>
-
     </header>
   );
 }
-
