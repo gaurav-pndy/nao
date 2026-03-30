@@ -11,8 +11,8 @@ export default function PartnerHero() {
         backgroundRepeat: "no-repeat",
       }}
     >
-      <div className="max-w-6xl  min-h-[calc(100vh-2rem)] md:min-h-[45vh] xl:min-h-[calc(100vh-3rem)]  h-full mx-auto px-4 flex  lg:items-end pt-20 md:pt-24 lg:pt-36  pb-36 xl:pb-48  relative">
-        <div className="flex  h-full justify-between xs:gap-10 md:gap-0 flex-col lg:flex-row  w-full lg:items-center">
+      <div className="max-w-6xl  min-h-[calc(100vh-2rem)] md:min-h-[45vh] xl:min-h-[calc(100vh-3rem)]  h-full mx-auto px-4 flex items-end lg:items-end pt-20 md:pt-24 lg:pt-36  pb-36 xl:pb-48  relative">
+        <div className="w-full h-full flex flex-col justify-between items-center xs:gap-10 md:gap-0  lg:flex-row  lg:items-center">
           {/* LEFT CONTENT */}
           <motion.div
             initial={{ opacity: 0, y: 24 }}

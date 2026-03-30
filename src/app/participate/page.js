@@ -14,7 +14,7 @@ import StudentBenefits from "@/components/Participate/StudentBenefits";
 
 export default function ParticipatePage() {
   return (
-    <>
+    <div className="overflow-x-hidden">
       <ParticipateHero />
       <WhoCanParticipate />
       <HowToRegister />
@@ -27,6 +27,6 @@ export default function ParticipatePage() {
       <ImportantDates />
       <FAQSection />
       <SupportSection />
-    </>
+    </div>
   );
 }

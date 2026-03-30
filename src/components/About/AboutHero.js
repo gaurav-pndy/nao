@@ -14,7 +14,7 @@ export default function AboutHero() {
         backgroundRepeat: "no-repeat",
       }}
     >
-      <div className="max-w-6xl  min-h-[calc(100vh-2rem)] md:min-h-[45vh] xl:min-h-[calc(100vh-3rem)]  h-full mx-auto px-4 flex  lg:items-end pt-20 md:pt-24 lg:pt-36  pb-36 xl:pb-48  relative">
+      <div className="max-w-6xl items-end  min-h-[calc(100vh-2rem)] md:min-h-[45vh] xl:min-h-[calc(100vh-3rem)]  h-full mx-auto px-4 flex  lg:items-end pt-20 md:pt-24 lg:pt-36  pb-36 xl:pb-48  relative">
         <div className="flex  h-full justify-between xs:gap-10 md:gap-0 flex-col lg:flex-row  w-full lg:items-center">
           {/* LEFT CONTENT */}
           <motion.div
