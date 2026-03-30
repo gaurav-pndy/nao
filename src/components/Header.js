@@ -99,16 +99,16 @@ export default function Header() {
             1st Pan India Aviation Olympiad
           </span>
 
-          <div className="hidden md:flex items-center gap-4">
-            {/* Phone number with hover pause */}
-            <span
+           <span
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
-              className="cursor-default"
+              className="ml-auto cursor-default"
             >
               {currentPhone}
             </span>
-            <span>| nao@thecso.in</span>
+
+          <div className="hidden md:flex items-center gap-4">
+            <span className="ml-2"> | nao@thecso.in</span>
 
             <button
               onClick={() => setShowDonate(true)}
@@ -276,7 +276,6 @@ export default function Header() {
 
               {/* Contact Info (Mobile) */}
               <div className="mt-6 text-[#2d333a] space-y-2">
-                <p>{currentPhone}</p>
                 <p>nao@thecso.in</p>
 
                 <div className="flex gap-3 pt-2">

@@ -25,7 +25,7 @@ const highlights = [
 
 export default function NAOHighlights() {
   return (
-    <section className="mt-32 py-16 bg-white">
+    <section className="mt-50 md:mt-22 py-16 bg-white">
       <div className="max-w-4xl mx-auto px-4">
         {/* Heading */}
         <motion.div
