@@ -59,6 +59,9 @@ export default function Header() {
     pathname === "/terms-and-conditions" ||
     pathname === "/refund-policy";
 
+  const forceSolidHeader = pathname.startsWith("/practice-tests");
+  const useSolidHeader = isScrolled || forceSolidHeader;
+
   // Timer: cycle through numbers only when not hovered
   useEffect(() => {
     if (isHovered) return;
@@ -153,7 +156,9 @@ export default function Header() {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.2, duration: 0.6 }}
         className={`transition-all duration-300 ${
-          isScrolled ? "bg-white shadow-md backdrop-blur-sm" : "bg-transparent"
+          useSolidHeader
+            ? "bg-white shadow-md backdrop-blur-sm"
+            : "bg-transparent"
         } border-none`}
       >
         <div className="max-w-6xl mx-auto px-4 py-2 lg:py-4 flex items-center justify-between">
@@ -168,12 +173,13 @@ export default function Header() {
             <div className="relative h-10 lg:h-16 w-24 lg:w-40">
               <Image
                 src={
-                  isHome || isScrolled
+                  isHome || useSolidHeader
                     ? "/header/logo.svg"
                     : "/header/logo-white.png"
                 }
                 alt="National Aviation Olympiad"
                 fill
+                sizes="(max-width: 768px) 96px, 160px"
                 priority
                 className="object-contain object-left"
               />
@@ -196,7 +202,7 @@ export default function Header() {
                     className={`transition-colors duration-300 ${
                       isHome
                         ? `${isActive ? "font-bold" : ""} text-black`
-                        : isScrolled
+                        : useSolidHeader
                           ? `${isActive ? "font-bold" : ""} text-black`
                           : `${isActive ? "font-bold" : ""} text-white`
                     }`}
@@ -219,7 +225,7 @@ export default function Header() {
             <button
               onClick={() => setMenuOpen(true)}
               className={`flex text-2xl flex-col gap-1 transition-colors ${
-                isScrolled || isHome ? "text-[#2d333a]" : "text-white"
+                useSolidHeader || isHome ? "text-[#2d333a]" : "text-white"
               }`}
             >
               <GiHamburgerMenu />
