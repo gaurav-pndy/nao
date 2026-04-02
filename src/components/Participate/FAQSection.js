@@ -12,7 +12,7 @@ const faqs = [
   {
     question: "What is the registration fee and process?",
     answer:
-      "Schools register on the NAO portal and enroll their students. Fees range from ₹50 to ₹200 depending on school type and gender, with 20% discount for girl students. Individual registration is available for special cases at ₹200–₹250.",
+      "Schools register on the NAO portal and enroll their students. Fees range from ₹50 to ₹200 depending on school type and gender, with 20% concession for girl students. Individual registration is available for special cases at ₹200–₹250.",
     highlighted: false,
   },
   {

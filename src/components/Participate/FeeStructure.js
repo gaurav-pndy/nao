@@ -145,7 +145,7 @@ export default function FeeStructure() {
 
           {/* Note */}
           <p className="mt-4 text-sm text-green-700 font-semibold align-middle text-center">
-            Note: To encourage diversity, a <span className="font-bold">20% registration discount</span> is available to all female applicants
+            Note: To encourage diversity, a <span className="font-bold">20% registration concession</span> is available to all female applicants
           </p>
         </motion.div>
       </div>

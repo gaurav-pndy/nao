@@ -21,7 +21,7 @@ const resources = [
   { label: "Study Materials", href: "/resources/#downloadable-resources" },
   { label: "Question Banks", href: "/resources/#downloadable-resources" },
   { label: "Video Tutorials", href: "/resources/#downloadable-resources" },
-  { label: "Practice Tests", href: "/resources/#downloadable-resources" },
+  { label: "Practice Tests", href: "/practice-tests" },
   { label: "Syllabus", href:"/resources/#downloadable-resources" },
   { label: "FAQs", href: "/resources/#downloadable-resources" },
 ];
@@ -73,6 +73,7 @@ export default function Footer() {
                 src="/footer/CSO.png"
                 alt="Centre for Scientific Outreach"
                 fill
+                sizes="(max-width: 768px) 120px, 150px"
                 className="object-contain"
               />
             </div>

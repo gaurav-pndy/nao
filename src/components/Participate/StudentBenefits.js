@@ -9,7 +9,7 @@ const benefits = [
     icon: FiAward,
     label: "Participation",
     color: "bg-orange-100 text-orange-800",
-    desc: "E-certificate for all registered participants. Lifetime access to NAO newsletters and 20% discount in next editions.",
+    desc: "E-certificate for all registered participants. Lifetime access to NAO newsletters and 20% concession in next editions.",
     level: "All Participants",
   },
   {
