@@ -4,6 +4,7 @@ import "./globals.css";
 import { Inter_Tight } from "next/font/google";
 import ConnectWithUs from "@/components/ConnectWithUs";
 import Footer from "@/components/Footer";
+import Script from "next/script";
 
 const inter = Inter_Tight({
   subsets: ["latin"],
@@ -57,6 +58,21 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        {/* Google Analytics Script */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-1GHJ0M0WRZ"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-1GHJ0M0WRZ');
+          `}
+        </Script>
+      </head>
       <body className={`antialiased bg-white ${inter.variable} text-[#2d333a]`}>
         <Header />
         <main>{children}</main>
