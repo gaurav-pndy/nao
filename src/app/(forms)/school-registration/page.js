@@ -301,6 +301,7 @@ export default function SchoolRegistrationPage() {
                     })
                   }
                   placeholder="Select State"
+                  className="mt-1 "
                 />
                 {errors.state && <p className={errorText}>{errors.state}</p>}
               </div>

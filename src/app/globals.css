@@ -19,10 +19,7 @@ body {
   }
 }
 
-/* .css-19bb58m {
-  padding-top: 4px !important;
-  padding-bottom: 4px !important;
-}
+/* 
 
 .css-b62m3t-container {
   margin-top: 4px !important;
@@ -41,6 +38,11 @@ body {
   box-shadow: 0 0 0 1.5px #f97316 !important;
   border-color: #f97316 !important;
 } */
+
+.css-19bb58m {
+  padding-top: 4px !important;
+  padding-bottom: 4px !important;
+}
 
 .react-tel-input {
   margin-top: 4px !important;
