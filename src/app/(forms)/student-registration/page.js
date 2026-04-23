@@ -40,6 +40,8 @@ export default function StudentRegistrationPage() {
   const [message, setMessage] = useState("");
   const [errorMsg, setErrorMsg] = useState("");
 
+  const [showSuccessModal, setShowSuccessModal] = useState(false);
+
   const stateOptions = [
     {
       label: "States",
@@ -192,7 +194,7 @@ export default function StudentRegistrationPage() {
         );
       }
 
-      setMessage("Student registered successfully!");
+      setShowSuccessModal(true);
 
       // Reset form
       setFormData({
@@ -457,6 +459,33 @@ export default function StudentRegistrationPage() {
           </button>
         </motion.form>
       </div>
+
+      {showSuccessModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
+          <div className="bg-white rounded-xl shadow-xl max-w-md w-full p-6 text-center">
+            <h2 className="text-xl font-semibold text-green-600">
+              Registration Successful !
+            </h2>
+
+            <p className="mt-3 text-gray-700">
+              Your registration has been completed successfully.
+            </p>
+
+            <p className="mt-2 text-sm text-gray-600">
+              Please check your email inbox for credentials. If you don’t see
+              it, check your
+              <span className="font-medium"> Spam / Junk </span> folder as well.
+            </p>
+
+            <button
+              onClick={() => setShowSuccessModal(false)}
+              className="mt-5 bg-yellow px-6 py-2 cursor-pointer rounded-md font-medium hover:bg-[#e6c400]"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
     </section>
   );
 }
